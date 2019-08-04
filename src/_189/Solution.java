@@ -3,7 +3,7 @@ package _189;
 import java.util.Arrays;
 
 /**
- * @Description:
+ * @Description: 将一个数组向右“前进”k步
  * @Author: 67ng
  * @Date: 2019/7/31 20:13
  */
