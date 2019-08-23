@@ -3,7 +3,7 @@ package _71;
 import java.util.*;
 
 /**
- * @Description: 将linux路径规范化
+ * @Description: 将linux路径规范化（用数组实现效率更快）
  * @Author: 67ng
  * @Date: 2019/8/20 21:37
  */
