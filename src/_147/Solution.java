@@ -39,9 +39,6 @@ public class Solution {
             pre = helper;
             cur = next;
         }
-
         return helper.next;
     }
-
-
 }
