@@ -31,7 +31,7 @@ public class Solution {
             }
         }
 
-        //通过右右移一位得到第二状态
+        //通过右移一位得到第二状态
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 board[i][j] >>= 1;  // Get the 2nd state.
@@ -64,7 +64,6 @@ public class Solution {
         System.out.println(Arrays.deepToString(ints));
     }
 }
-
 
 
 
