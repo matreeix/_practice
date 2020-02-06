@@ -1,7 +1,7 @@
 package _graph._785;
 
 /**
- * @Description:
+ * @Description:二分图的检测
  * @Author: 67ng
  * @Date: 2020/2/5
  */
