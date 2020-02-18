@@ -2,6 +2,7 @@ package _math._367;
 
 /**
  * @description ：判断平方数
+ * 注意：小心整型溢出，可以直接用long来存储mid
  * @date ： 2020-02-18
  */
 public class Solution {
