@@ -60,7 +60,6 @@ public class Solution2 {
         int endSize = board.length();
         if (startSize == endSize)
             return board;
-        else
             return removeConsecutive(board);*/
     }
 
