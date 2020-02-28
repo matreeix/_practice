@@ -13,7 +13,6 @@ public class Solution2 {
             for (int j = 1; j * j <= i; j++)//j中寻找i的因子
                 if (i % j == 0 && !dp[i - j])
                     dp[i] = true;
-
         return dp[N];
     }
 
