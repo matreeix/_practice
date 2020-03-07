@@ -14,7 +14,7 @@ public class Solution {
         //先按照截至日期排序
         Arrays.sort(courses,
                 (int[] course1, int[] course2) -> course1[1] - course2[1]);
-        Queue<Integer> pq = new PriorityQueue<>((a, b) -> b - 1);//大根堆
+        Queue<Integer> pq = new PriorityQueue<>((a, b) -> b - a);//大根堆
         int costTime = 0;//记录累计花费过的时间
         for (int[] course : courses) {
             costTime += course[0];
