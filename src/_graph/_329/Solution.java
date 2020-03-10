@@ -43,9 +43,6 @@ public class Solution {
         return x >= 0 && x < R && y >= 0 && y < C;
     }
 
-    public static void main(String[] args) {
-
-    }
-
 }
+
 
