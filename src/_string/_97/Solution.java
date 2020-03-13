@@ -103,7 +103,8 @@ public class Solution {
         return isInterleave0(s1, s2, s3, 0, 0, cache);
     }
 
-    private boolean isInterleave0(String s1, String s2, String s3, int p1, int p2, HashSet<Integer> cache) {
+    private boolean isInterleave0(String s1, String s2, String s3,
+                                  int p1, int p2, HashSet<Integer> cache) {
         if (p1 + p2 == s3.length())
             return true;
         if (cache.contains(p1 * s3.length() + p2))

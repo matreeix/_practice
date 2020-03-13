@@ -1,4 +1,4 @@
-package _605;
+package _array._605;
 
 /**
  * @Description: 数组中1代表种了花，0代表为空，相邻之间花不能挨着，求给定数组能否种植n朵花
