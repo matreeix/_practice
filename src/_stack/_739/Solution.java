@@ -26,6 +26,20 @@ public class Solution {
 
     }
 
+    public int[] dailyTemperatures2(int[] T) {
+        int[] stack = new int[T.length];
+        int top = -1;
+        int[] ret = new int[T.length];
+        for (int i = 0; i < T.length; i++) {
+            while (top > -1 && T[i] > T[stack[top]]) {
+                int idx = stack[top--];
+                ret[idx] = i - idx;
+            }
+            stack[++top] = i;
+        }
+        return ret;
+    }
+
     public static void main(String[] args) {
         int[] arr = {73, 74, 75, 71, 69, 72, 76, 73};
         System.out.println(Arrays.toString(dailyTemperatures(arr)));
