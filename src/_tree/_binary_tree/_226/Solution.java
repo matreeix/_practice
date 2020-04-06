@@ -19,7 +19,7 @@ public class Solution {
     public TreeNode invertTree(TreeNode root) {
         if (root == null)
             return null;
-        TreeNode temp = root.right;
+        TreeNode temp = root.right;//需要暂存右子树
         root.right = invertTree(root.left);
         root.left = invertTree(temp);
 
