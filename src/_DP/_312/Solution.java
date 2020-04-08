@@ -13,7 +13,7 @@ public class Solution {
     public int maxCoins(int[] nums, int start, int end, int[][] dp) {
         if (start > end)
             return 0;
-        if (dp[start][end] != 0)//记忆化
+        if (dp[start][end] != 0)//利用了记忆化，剪枝
             return dp[start][end];
 
         int max = nums[start];
@@ -25,7 +25,7 @@ public class Solution {
 
             max = Math.max(max, val);
         }
-        dp[start][end] = max;
+        dp[start][end] = max;//记录区间[start,end]的最大扎值
         return max;
     }
 
