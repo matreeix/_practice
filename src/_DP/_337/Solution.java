@@ -2,9 +2,7 @@ package _DP._337;
 
 import javafx.util.Pair;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @description ：打家劫舍3
@@ -38,6 +36,30 @@ public class Solution {
         res[1] = root.val + left[0] + right[0];
 
         return res;
+    }
+
+    public int rob2(TreeNode root) {
+        return robSub(root, new HashMap<>());
+    }
+
+    private int robSub(TreeNode root, Map<TreeNode, Integer> map) {
+        if (root == null) return 0;
+        if (map.containsKey(root)) return map.get(root);
+
+        int val = 0;
+
+        if (root.left != null) {
+            val += robSub(root.left.left, map) + robSub(root.left.right, map);
+        }
+
+        if (root.right != null) {
+            val += robSub(root.right.left, map) + robSub(root.right.right, map);
+        }
+
+        val = Math.max(val + root.val, robSub(root.left, map) + robSub(root.right, map));
+        map.put(root, val);
+
+        return val;
     }
 
 //             2
