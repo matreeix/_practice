@@ -8,6 +8,7 @@ import java.util.List;
  * @date ： 2020-04-10
  */
 public class Solution {
+    //自顶向下
     public int minimumTotal(List<List<Integer>> triangle) {
         int height = triangle.size();
         int[][] mem = new int[height][height];//记录到达每个值时取得的最小和
@@ -30,12 +31,24 @@ public class Solution {
 
         return max;
     }
+
+    //自底向上
+    public int minimumTotal2(List<List<Integer>> triangle) {
+        int[] layer = new int[triangle.size() + 1];
+        for (int i = triangle.size() - 1; i >= 0; i--) {
+            for (int j = 0; j < triangle.get(i).size(); j++) {
+                layer[j] = Math.min(layer[j], layer[j + 1]) + triangle.get(i).get(j);
+            }
+        }
+        return layer[0];
+    }
+
+
+    public static void main(String[] args) {
 //              [2],
 //              [3,4],
 //              [6,5,7],
 //              [4,1,8,3]
-
-    public static void main(String[] args) {
         List<Integer> list1 = new ArrayList<>();
         List<Integer> list2 = new ArrayList<>();
         List<Integer> list3 = new ArrayList<>();
