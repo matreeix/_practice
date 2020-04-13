@@ -18,10 +18,10 @@ public class Solution {
         int[][] D = new int[n + 1][m + 1];
 
         // 边界状态初始化
-        for (int i = 0; i < n + 1; i++) {
+        for (int i = 0; i < n + 1; i++) {//字符串 A 为空，如从空转换到 ro，显然编辑距离为字符串 B 的长度，这里是 2；
             D[i][0] = i;
         }
-        for (int j = 0; j < m + 1; j++) {
+        for (int j = 0; j < m + 1; j++) {//同上理
             D[0][j] = j;
         }
 
