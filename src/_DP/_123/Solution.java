@@ -11,6 +11,7 @@ package _DP._123;
  */
 public class Solution {
     public int maxProfit(int[] prices) {
+        if (prices.length==0)return 0;
         int max_k = 2;
         int n = prices.length;
         int[][][] dp = new int[n][max_k + 1][2];
@@ -33,6 +34,7 @@ public class Solution {
 
     //这里 k 取值范围比较小，所以可以不用 for 循环，直接把 k = 1 和 2 的情况手动列举出来也可以：
     public int maxProfit2(int[] prices) {
+        if (prices.length==0)return 0;
         int dp_i10 = 0, dp_i11 = Integer.MIN_VALUE;
         int dp_i20 = 0, dp_i21 = Integer.MIN_VALUE;
         for (int price : prices) {
