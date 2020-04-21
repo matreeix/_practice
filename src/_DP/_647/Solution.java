@@ -62,7 +62,8 @@ public class Solution {
             }
         }
         int ans = 0;
-        for (int v: Z) ans += (v + 1) / 2;
+        for (int v: Z)
+            ans += (v + 1) / 2;
         return ans;
     }
 }
