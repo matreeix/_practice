@@ -58,4 +58,9 @@ public class Solution {
 
         return ans;
     }
+
+    public static void main(String[] args) {
+        int[] prison = {};
+
+    }
 }
