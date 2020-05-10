@@ -1,4 +1,4 @@
-package _other._52;
+package backtracking._52;
 
 /**
  * @Description: N皇后问题

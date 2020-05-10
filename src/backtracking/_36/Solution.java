@@ -1,4 +1,4 @@
-package _other._36;
+package backtracking._36;
 
 import java.util.*;
 

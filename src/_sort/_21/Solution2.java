@@ -1,4 +1,4 @@
-package _other._21;
+package _sort._21;
 
 /**
  * @Description: 递归进行归并
@@ -6,7 +6,7 @@ package _other._21;
  * @Date: 2019/8/13 20:19
  */
 public class Solution2 {
-    public static class ListNode {
+     static class ListNode {
         int val;
         ListNode next;
 

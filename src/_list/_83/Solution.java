@@ -1,4 +1,4 @@
-package _other._83;
+package _list._83;
 
 /**
  * @Description: 从有序链表里删除多余的重复节点

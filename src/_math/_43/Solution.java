@@ -1,4 +1,4 @@
-package _other._43;
+package _math._43;
 
 /**
  * @Description: 字符串的乘法, 其实就是乘法的运算方法

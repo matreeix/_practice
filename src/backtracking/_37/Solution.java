@@ -1,4 +1,4 @@
-package _other._37;
+package backtracking._37;
 
 /**
  * @Description: 数独的解法

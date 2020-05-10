@@ -1,4 +1,4 @@
-package _other._66;
+package _math._66;
 
 import java.util.Arrays;
 

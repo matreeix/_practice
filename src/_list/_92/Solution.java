@@ -1,4 +1,4 @@
-package _other._92;
+package _list._92;
 
 /**
  * @Description: 在[m, n]区间翻转链表

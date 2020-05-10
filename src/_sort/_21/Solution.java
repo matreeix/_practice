@@ -1,4 +1,4 @@
-package _other._21;
+package _sort._21;
 
 /**
  * @Description: 归并两个有序链表
@@ -6,7 +6,7 @@ package _other._21;
  * @Date: 2019/8/10 21:55
  */
 public class Solution {
-    public static class ListNode {
+     static class ListNode {
         int val;
         ListNode next;
 
