@@ -3,7 +3,8 @@ package _DP._741;
 import java.util.Arrays;
 
 /**
- * @Description:
+ * @Description: 摘樱桃
+ * @Linked: https://leetcode-cn.com/problems/cherry-pickup/solution/dong-tai-gui-hua-xiang-xi-jie-xi-tu-jie-by-newhar/
  * @Author: 67ng
  * @Date: 2020/5/9
  */
@@ -20,8 +21,7 @@ public class Solution {
         dp[N - 1][N - 1] = grid[N - 1][N - 1];
 
         //sum表示一共要走的步数，也就是k，通过一个循环递增，来降低一个维度，从而不需要使用三维数组k那一维,
-        //当前走第sum步，一共要走2*N-2步（n-1）*2,下标的话就是2N-3，注意是倒序的
-        for (int sum = 2 * N - 3; sum >= 0; sum--) {
+        for (int sum = 2 * N - 3; sum >= 0; sum--) {//当前走第sum步，一共要走2*N-2步,下标的话就是2N-3，注意是倒序的
             for (int i1 = Math.max(0, sum - N + 1); i1 <= Math.min(N - 1, sum); i1++) {
                 for (int i2 = i1; i2 <= Math.min(N - 1, sum); i2++) {
                     //i1、j2的关联：一共要走sum步，sum<2*n，因此起点为Math.max(0,sum-N+1),
