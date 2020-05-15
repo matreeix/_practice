@@ -10,6 +10,7 @@ import java.util.Map;
  * @Date: 5/14/2020
  */
 public class Solution {
+    private int val = 5;
 
     /**
      * 思路：
@@ -22,8 +23,7 @@ public class Solution {
      * 四.我们以存AB两数组之和为例。首先求出A和B任意两数之和sumAB，以sumAB为key，sumAB出现的次数为value，存入hashmap中。
      * 然后计算C和D中任意两数之和的相反数sumCD，在hashmap中查找是否存在key为sumCD。
      * 算法时间复杂度为O(n2)。
-     *
-     * */
+     */
     public int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
         Map<Integer, Integer> map = new HashMap<>();
         //Map<Integer, Integer> map = new HashMap<>();
