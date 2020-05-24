@@ -1,4 +1,8 @@
-package _other._148;
+package _list._148;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * @Description: 对链表排序(归并排序)
@@ -6,7 +10,7 @@ package _other._148;
  * @Date: 2019/8/10 21:59
  */
 public class Solution {
-    public class ListNode {
+    static class ListNode {
         int val;
         ListNode next;
 
@@ -15,6 +19,7 @@ public class Solution {
         }
     }
 
+    //改变节点的引用
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null)
             return head;
@@ -54,6 +59,48 @@ public class Solution {
 
         ListNode ret = dummyHead.next;
         return ret;
+    }
+
+    //改变节点的值
+    public static ListNode sortList2(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+        List<Integer> list = new ArrayList<>();
+        ListNode tmp = head;
+        while (tmp != null) {
+            list.add(tmp.val);
+            tmp = tmp.next;
+        }
+        Collections.sort(list);
+        int index = 0;
+        ListNode dummyHead = new ListNode(-1);
+        dummyHead.next = head;
+        while (head != null) {
+            head.val = list.get(index++);
+            head = head.next;
+        }
+        return dummyHead.next;
+    }
+
+    public static void main(String[] args) {
+        ListNode head = new ListNode(4);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(1);
+        head.next.next.next = new ListNode(3);
+        ListNode tmp = head;
+        while (tmp != null) {
+            System.out.print(tmp.val + "->");
+            tmp = tmp.next;
+        }
+
+        ListNode tmp2 = sortList2(head);
+
+        while (tmp2 != null) {
+            System.out.print(tmp2.val + "->");
+            tmp2 = tmp2.next;
+        }
+
+
     }
 
 
