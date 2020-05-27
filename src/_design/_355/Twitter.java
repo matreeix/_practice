@@ -79,6 +79,7 @@ public class Twitter {
             maxHeap.offer(twitter.get(userId));
         }
 
+        //将关注者的推文放入队列中
         Set<Integer> followingList = followings.get(userId);
         if (followingList != null && followingList.size() > 0) {
             for (Integer followingId : followingList) {
