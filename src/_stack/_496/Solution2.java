@@ -1,4 +1,4 @@
-package _other._496;
+package _stack._496;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,10 +1,12 @@
-package _other._503;
+package _stack._503;
 
 import java.util.Arrays;
 import java.util.Stack;
 
 /**
- * @Description: 在循环数组中找每个元素的下一个更大元素，没有就填-1
+ * @Description: 下一个更大元素 II
+ *
+ * 在循环数组中找每个元素的下一个更大元素，没有就填-1
  * @Author: LeetCode@yuxiangmusic
  * @Date: 2019/8/16 20:39
  */

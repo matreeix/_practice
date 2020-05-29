@@ -1,9 +1,11 @@
-package _other._496;
+package _stack._496;
 
 import java.util.Arrays;
 
 /**
- * @Description: s数组1是数组2的子集，在数组2中找到数组1的对应元素后面的更大的元素
+ * @Description: 下一个更大元素 I
+ *
+ * s数组1是数组2的子集，在数组2中找到数组1的对应元素后面的更大的元素
  * ，并返回，若不存在就返回-1.
  * @Author: 67ng
  * @Date: 2019/8/16 20:38

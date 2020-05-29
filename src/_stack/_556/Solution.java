@@ -1,9 +1,11 @@
-package _other._556;
+package _stack._556;
 
 import java.util.Arrays;
 
 /**
- * @Description: 32位的整数是否存在相同数字组成的恰好比它大的数，没有返回-1
+ * @Description: 下一个更大元素 III
+ *
+ * 32位的整数是否存在相同数字组成的恰好比它大的数，没有返回-1
  * @Author: sanketdige268
  * @Date: 2019/8/16 20:39
  */
