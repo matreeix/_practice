@@ -10,6 +10,7 @@ import java.util.*;
  * @Date: 2020/6/1
  */
 public class Solution {
+    //使用队列
     public static String predictPartyVictory(String senate) {
         Queue<Integer> queue = new LinkedList();
         int[] people = new int[]{0, 0};//记录R和D的数量
@@ -38,9 +39,9 @@ public class Solution {
     public String predictPartyVictory2(String senate) {
         boolean R = true, D = true;
         char[] arr = senate.toCharArray();
-        //标记变量，当person > 0的时候，此时R方有权利把D方的成员淘汰掉
-        //当person < 0的时候，D方有权利把R方的成员淘汰掉
-        int person = 0;
+        //标记变量，ban > 0的时候，此时R方有权利把D方的成员淘汰掉
+        //ban < 0的时候，D方有权利把R方的成员淘汰掉
+        int ban = 0;//记录ban权重，妙啊！！！
         while (R && D) {
             //当遇到双方成员的时候置为true，表示当前还有人员存在
             //当R或D为false，表示一方已经没有成员存在了，胜负已分，结束循环
@@ -49,18 +50,18 @@ public class Solution {
             for (int i = 0; i < arr.length; ++i) {
                 if (arr[i] == 'R') {
                     R = true;
-                    if (person < 0)
+                    if (ban < 0)
                         arr[i] = 'O';
-                    ++person;
+                    ++ban;
                 } else if (arr[i] == 'D') {
                     D = true;
-                    if (person > 0)
+                    if (ban > 0)
                         arr[i] = 'O';
-                    --person;
+                    --ban;
                 }
             }
         }
-        return person > 0 ? "Radiant" : "Dire";
+        return ban > 0 ? "Radiant" : "Dire";
     }
 
     public static void main(String[] args) {
