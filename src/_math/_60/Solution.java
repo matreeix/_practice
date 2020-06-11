@@ -1,4 +1,4 @@
-package backtracking._60;
+package _math._60;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -118,5 +118,10 @@ public class Solution {
         return sb.toString();
     }
 
+    public static void main(String[] args) {
+        int max = 1 * 2 * 3 * 4 * 5 * 6 * 7 * 8 * 9;
+        System.out.println(max);
+        System.out.println((new Solution()).getPermutation(9, 362879));
+    }
 
 }
