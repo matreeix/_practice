@@ -1,4 +1,4 @@
-package _other._268;
+package _bit_calc._268;
 
 /**
  * @Description: 求含0, 1, 2, 3....n的数组(length =n)中缺失的数
@@ -9,7 +9,7 @@ package _other._268;
 public class Solution {
     //a^b^b =a
     public static int missingNumber(int[] nums) {
-        int xor = 0, i = 0;
+        int xor = 0, i;
         for (i = 0; i < nums.length; i++) {
             xor = xor ^ i ^ nums[i];
         }
