@@ -16,7 +16,7 @@ public class Solution {
     public void sortColors(int[] nums) {
 
         int L = 0;//记录0的右边界
-        int curr = 0;//记录1
+        int curr = 0;//从左到右扫描指针
         int R = nums.length - 1;//记录2的左边界
         int tmp;
         while (curr <= R) {
