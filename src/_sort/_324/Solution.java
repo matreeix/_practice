@@ -44,27 +44,99 @@ public class Solution {
         }
     }
 
+    int n = -1;
+
+    //快速选择+荷兰国旗，时间复杂度O(n)
     public void wiggleSort2(int[] nums) {
-//        int len = nums.length;
-//
-//        // Find a median.
-//        auto midptr = nums.begin() + len / 2;
-//        nth_element(nums.begin(), midptr, nums.end());
-//        int mid = *midptr;
-//
-//        // Index-rewiring.
-//        int A (i) = nums[(1 + 2 * (i)) % (len | 1)];
-//
-//        // 3-way-partition-to-wiggly in O(n) time with O(1) space.
-//        int i = 0, j = 0, k = len - 1;
-//        while (j <= k) {
-//            if (A(j) > mid)
-//                swap(A(i++), A(j++));
-//            else if (A(j) < mid)
-//                swap(A(j), A(k--));
-//            else
-//                j++;
-//        }
+        //找到中位数索引
+        int midIndex = this.quickSelect(nums, 0, nums.length - 1);
+        //找到中位数
+        int mid = nums[midIndex];
+        n = nums.length;
+        //三分法
+        for (int i = 0, j = 0, k = nums.length - 1; j <= k; ) {
+            if (nums[V(j)] > mid) {
+                swap(nums, V(j++), V(i++));
+            } else if (nums[V(j)] < mid) {
+                swap(nums, V(j), V(k--));
+            } else {
+                j++;
+            }
+        }
+    }
+
+    public int V(int i) {
+        return (1 + 2 * (i)) % (n | 1);
+    }
+
+    public void swap(int[] nums, int i, int j) {
+        int t = nums[i];
+        nums[i] = nums[j];
+        nums[j] = t;
+    }
+
+    //类似于快排去找到中位数
+    public int quickSelect(int[] nums, int left, int right) {
+        int pivot = nums[left];
+        int l = left;
+        int r = right;
+        while (l < r) {
+            while (l < r && nums[r] >= pivot) {
+                r--;
+            }
+            if (l < r) {
+                nums[l++] = nums[r];
+            }
+            while (l < r && nums[l] <= pivot) {
+                l++;
+            }
+            if (l < r) {
+                nums[r--] = nums[l];
+            }
+        }
+        nums[l] = pivot;
+        if (l == nums.length / 2) {
+            return l;
+        } else if (l > nums.length / 2) {
+            return this.quickSelect(nums, left, l - 1);
+        } else {
+            return this.quickSelect(nums, l + 1, right);
+        }
+    }
+
+    //最优解法
+    public void wiggleSort3(int[] nums) {
+        int[] array = new int[5000];
+        for (int num : nums) {
+            array[num]++;
+        }
+        int index = 4999;
+        for (int i = 1; i < nums.length; i += 2) {
+            while (index > 0) {
+                if (array[index] > 0) {
+                    break;
+                } else {
+                    index--;
+                }
+            }
+            if (array[index] > 0) {
+                nums[i] = index;
+                array[index]--;
+            }
+        }
+        for (int i = 0; i < nums.length; i += 2) {
+            while (index > 0) {
+                if (array[index] > 0) {
+                    break;
+                } else {
+                    index--;
+                }
+            }
+            if (array[index] > 0) {
+                nums[i] = index;
+                array[index]--;
+            }
+        }
     }
 
 
