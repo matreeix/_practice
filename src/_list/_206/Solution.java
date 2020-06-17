@@ -1,4 +1,4 @@
-package _other._206;
+package _list._206;
 
 /**
  * @Description: 反转链表
@@ -27,6 +27,7 @@ public class Solution {
         while (cur != null) {
             ListNode next = cur.next;
             cur.next = pre;//反转链表
+
             pre = cur;
             cur = next;
         }

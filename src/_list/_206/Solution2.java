@@ -1,4 +1,4 @@
-package _other._206;
+package _list._206;
 
 /**
  * @Description: 递归的方式
@@ -31,8 +31,8 @@ public class Solution2 {
 
         // head->next此刻指向head后面的链表的尾节点
         // head->next->next = head把head节点放在了尾部
-        head.next.next = head;
-        head.next = null;
+        head.next.next = head;//其实形成了两节点的循环
+        head.next = null;//打断循环
 
         return rhead;
     }
