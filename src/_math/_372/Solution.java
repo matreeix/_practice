@@ -57,7 +57,7 @@ public class Solution {
             return 0;
         int p = 0;
         for (int i : b)
-            p = (p * 10 + i) % 1140;
+            p = (p * 10 + i) % 1140;//what the fuck?
         //if (p == 0) p += 1440;
         return power(a, p, 1337);
     }
