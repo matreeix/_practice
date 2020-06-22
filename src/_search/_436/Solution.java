@@ -1,4 +1,4 @@
-package _search;
+package _search._436;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -6,10 +6,12 @@ import java.util.Map;
 
 /**
  * @Description:
- * @Author: 67ng
- * @Date: 5/13/2020
+ * @Author: Pythagodzilla
+ * @Date: 2020/6/22
  */
-public class _436 {
+
+public class Solution {
+
     public int[] findRightInterval(int[][] intervals) {
         int len = intervals.length;
         if (len == 0)
@@ -60,6 +62,6 @@ public class _436 {
 
     public static void main(String[] args) {
         int[][] ints = {{3, 4}, {2, 3}, {1, 2}};
-        System.out.println(Arrays.toString((new _436()).findRightInterval(ints)));
+        System.out.println(Arrays.toString((new Solution()).findRightInterval(ints)));
     }
 }

@@ -13,19 +13,16 @@ public class Solution {
         if (points == null || points.length == 0) return 0;
         if (points.length == 1) return 1;
         Arrays.sort(points, (a, b) -> a[0] - b[0]);//先按左边界排序
-        int arrows = 1;
-        int xStart, xEnd, firstEnd = points[0][1];
-        for (int[] p : points) {
-            xStart = p[0];
-            xEnd = p[1];
-            // if the current balloon starts after the end of another one,
-            // one needs one more arrow
-            if (firstEnd < xStart) {
-                arrows++;
-                firstEnd = xEnd;
+        int count = 1;
+        int x_end = points[0][1];
+        for (int[] point : points) {
+            if (point[0] > x_end) {
+                count++;
+                x_end = point[1];
             }
         }
-        return arrows;
+
+        return count;
     }
 
     public static void main(String[] args) {
