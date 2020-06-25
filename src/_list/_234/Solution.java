@@ -1,4 +1,4 @@
-package _other._234;
+package _list._234;
 
 /**
  * @Description: 判断回文链表
