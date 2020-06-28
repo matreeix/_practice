@@ -12,7 +12,6 @@ import java.util.List;
  * 说明：
  * 1.字母异位词指字母相同，但排列不同的字符串。
  * 2.不考虑答案输出的顺序。
- *
  * @Author: Pythagodzilla
  * @Date: 2020/6/28
  */
@@ -46,11 +45,37 @@ public class Solution {
                     window[chl - 'a']--;
                     if (window[chl - 'a'] < needs[chl - 'a'])
                         total++;
-
                 }
                 left++;
             }
             right++;
+        }
+        return res;
+    }
+
+    //精简版
+    public List<Integer> findAnagrams2(String s, String p) {
+        List<Integer> res = new ArrayList<Integer>();
+        int l = 0, r = 0; //左闭右开的滑动窗口
+        char[] arrS = s.toCharArray();
+        char[] arrP = p.toCharArray();
+        int[] needs = new int[26];//统计字符频数的数组
+        int[] window = new int[26];
+        for (char c : arrP)
+            needs[c - 'a']++;
+
+        while (r < arrS.length) {
+            window[arrS[r] - 'a']++;
+            //如果某个字符的频数超过了统计数组对应的字符数，移动左指针，分下面两种情况：
+            //1.该字符是统计数组含有的字符，说明长度过长；
+            //2.统计数组不含有该字符，则左指针直接跳过该字符的位置
+            //保证了窗口里的字符比统计数组只少不多，若窗口的长度等于统计数组长度，则两者必然是异位词（妙啊！）
+            while (window[arrS[r] - 'a'] > needs[arrS[r] - 'a'])
+                window[arrS[l++] - 'a']--;
+
+            r++;
+            if ((r - l) == arrP.length)//窗口的长度等于给定字符串长度，既是匹配到字母异位词
+                res.add(l);
         }
         return res;
     }
