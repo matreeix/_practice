@@ -81,7 +81,7 @@ public class Solution {
     public List<List<String>> groupAnagrams3(String[] strs) {
         int n = strs.length;
         List<List<String>> res = new ArrayList<>();
-        HashMap<Long, Integer> map = new HashMap<>();
+        HashMap<Long, Integer> map = new HashMap<>();//hashcoded->编号
         int[] primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
                 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
                 73, 79, 83, 89, 97, 101};//前26个素数
@@ -99,7 +99,7 @@ public class Solution {
         return res;
     }
 
-    //用hashcode来判断字母异位词
+    //用hashcode来判断字母异位词,可能会溢出
     private long getHashcode(String str, int[] primes) {
         long hashcode = 1;
         for (int i = 0; i < str.length(); ++i) {
@@ -113,5 +113,6 @@ public class Solution {
         String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
         Solution s = new Solution();
         System.out.println(s.groupAnagrams(strs));
+        System.out.println(Long.MAX_VALUE);
     }
 }
