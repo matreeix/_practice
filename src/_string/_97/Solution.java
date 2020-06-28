@@ -6,7 +6,10 @@ import java.util.LinkedList;
 import java.util.Set;
 
 /**
- * @Description:
+ * @Description: 交错字符串
+ *
+ * 给定三个字符串 s1, s2, s3, 验证 s3 是否是由 s1 和 s2 交错组成的。
+ *
  * @Author: 67ng
  * @Date: 2020/3/12
  */
