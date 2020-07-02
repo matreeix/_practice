@@ -23,7 +23,7 @@ public class Solution {
         return bits;
     }
 
-    //位运算。原理:对于任意数字 n ，将 n 和 n - 1 做与运算，会把最后一个 1 的位变成 0
+    //位运算,原理:对于任意数字 n ，将 n 和 n - 1 做与运算，会把最后一个 1 的位变成 0
     public int hammingWeight2(int n) {
         int sum = 0;
         while (n != 0) {
@@ -31,6 +31,10 @@ public class Solution {
             n &= (n - 1);
         }
         return sum;
+    }
+
+    public int hammingweight3(int n){
+        return Integer.bitCount(n);
     }
 
 }
