@@ -53,7 +53,7 @@ class Ugly {
     }
 }
 
-//dp,三指针法
+//dp（妙啊！）,三指针法,核心原理是没一个丑数都是由前面某个丑数乘以2或者3或者5得到的
 class Ugly2 {
     public int[] nums = new int[1690];
 
@@ -70,4 +70,3 @@ class Ugly2 {
         }
     }
 }
-
