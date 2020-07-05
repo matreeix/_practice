@@ -2,10 +2,7 @@ package _string._1496;
 
 import javafx.util.Pair;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @Description: 判断路径是否相交
@@ -46,7 +43,7 @@ public class Solution {
         return false;
     }
 
-    //优秀解答
+    //错误解答
     public boolean isPathCrossing2(String path) {
         if (path.contains("NS") || path.contains("SN") || path.contains("EW") || path.contains("WE"))
             return true;
@@ -70,8 +67,31 @@ public class Solution {
                     W++;
                     break;
             }
-            if (N == S && E == W)//统计相反步数，妙啊！
+            if (N == S && E == W)//只能判断是否返回原点
                 return true;
+        }
+        return false;
+    }
+
+    //优秀解答，妙啊，状态压缩
+    public boolean isPathCrossing3(String path) {
+        ArrayList<Integer> al = new ArrayList<>();
+        al.add(0);
+        int x = 0, y = 0;
+        for (int i = 0; i < path.length(); i++) {
+            if (path.charAt(i) == 'N')
+                x += 1;
+            else if (path.charAt(i) == 'S')
+                x -= 1;
+            else if (path.charAt(i) == 'E')
+                y += 1;
+            else
+                y -= 1;
+
+            if (al.contains(x + y * (path.length() + 1)))
+                return true;
+            else
+                al.add(x + y * (path.length() + 1));
         }
         return false;
     }
@@ -79,8 +99,12 @@ public class Solution {
     public static void main(String[] args) {
         String s1 = "NES";
         String s2 = "NESWW";
+        String s3 = "NENESW";
         System.out.println((new Solution()).isPathCrossing(s1));
         System.out.println((new Solution()).isPathCrossing(s2));
+        System.out.println((new Solution()).isPathCrossing2(s3));
+        System.out.println((new Solution()).isPathCrossing(s3));
+        System.out.println((new Solution()).isPathCrossing3(s3));
     }
 
 }
