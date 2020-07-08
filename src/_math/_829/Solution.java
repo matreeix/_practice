@@ -37,7 +37,9 @@ public class Solution {
         return count;
     }
 
-    //最优解法
+    //最优解法，
+    //计数原理：如果为N = 3^a * 5^b * 7^c * 11^d ....，则具有的因子数量N等于
+    //N_factors = (a + 1) * (b + 1) * (c + 1) * (d + 1) .....
     public int consecutiveNumbersSum3(int N) {
         int res = 1, count;
         while (N % 2 == 0)
