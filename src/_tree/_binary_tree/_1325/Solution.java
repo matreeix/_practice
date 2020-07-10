@@ -40,8 +40,4 @@ public class Solution {
             root.right = removeLeafNodes(root.right, target);
         return root.left == root.right && root.val == target ? null : root;
     }
-
-    public static void main(String[] args) {
-
-    }
 }
