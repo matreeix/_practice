@@ -1,5 +1,7 @@
 package _contest._biweekly._30;
 
+import java.util.Arrays;
+
 /**
  * @Description: 已排序子数组和的范围总和
  * <p>
@@ -10,11 +12,32 @@ package _contest._biweekly._30;
  */
 
 public class Solution2 {
-    public int rangeSum(int[] nums, int n, int left, int right) {
+    //暴力法，直接构造和数组，会超出时间限制
+    public static int rangeSum(int[] nums, int n, int left, int right) {
+        int[] sums = new int[n * (n + 1) / 2];
+        int mod = 1000000007;
+        int mark = 0;
+        for (int bound = 1; bound <= n; bound++) {
+            for (int i = 0; i + bound <= nums.length; i++) {
+                int sum = 0;
+                for (int j = i; j < i + bound; j++) {
+                    sum = (sum + nums[j]) % mod;
+                }
+                sums[mark++] = sum;
+            }
+        }
 
+        Arrays.sort(sums);
+        int res = 0;
+        for (int index = left - 1; index < right; index++) {
+            res = (res + sums[index]) % mod;
+        }
+        return res;
     }
 
     public static void main(String[] args) {
-
+        int[] nums = {1, 2, 3, 4};
+        int n = 4, left = 1, right = 5;
+        System.out.println(rangeSum(nums, n, left, right));
     }
 }
