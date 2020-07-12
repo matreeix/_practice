@@ -1,6 +1,7 @@
 package _CONTEST._biweekly._30;
 
-import java.util.Arrays;
+
+import java.util.*;
 
 /**
  * @Description: 已排序子数组和的范围总和
@@ -33,6 +34,61 @@ public class Solution2 {
             res = (res + sums[index]) % mod;
         }
         return res;
+    }
+
+    //优先队列
+    static class Pair {
+        long sum;
+        int index;
+
+        Pair(long sum, int index) {
+            this.sum = sum;
+            this.index = index;
+        }
+    }
+
+    public int rangeSum2(int[] nums, int n, int left, int right) {
+        PriorityQueue<Pair> minHeap = new PriorityQueue<Pair>(n, new Comparator<Pair>() {
+            @Override
+            public int compare(Pair o1, Pair o2) {
+                if (o1.sum == o2.sum) {
+                    return 0;
+                }
+                return o1.sum < o2.sum ? -1 : 1;
+            }
+        });
+        for (int i = 0; i < n; i++)
+            minHeap.offer(new Pair(nums[i], i + 1));//先将数组所有元素放入小根堆
+
+        int res = 0, mod = 1000000007;
+        for (int i = 1; i <= right; i++) {
+            Pair p = minHeap.poll();
+            if (i >= left)
+                res = (int) ((res + p.sum) % mod);
+            //最精髓的代码，下面这段代码会将 剩下的 所有的 子数组和 依次放入小根堆中
+            if (p.index < n) {
+                p.sum += nums[p.index++];//1.当前元素(或者子数组和)加上后一个元素，并且指针后移一位(if判断条件保证了不会越位)
+                minHeap.offer(p);        //2.由于是小根堆，保证了较小的子数组和必然会先出现并加进小根堆
+            }
+        }
+        return res;
+    }
+
+    //前缀和，时间复杂度O(n^2 log n^2)
+    public static int rangeSum3(int[] nums, int n, int left, int right) {
+        long res = 0, min = Long.MAX_VALUE, mod = 1_000_000_007, sum = 0;
+        List<Long> sums = new ArrayList<>(), pSum = new ArrayList<>();  // sums - all sums of subarrays, pSum - prefix sums;
+        pSum.add(0L);
+        for (int i = 0; i < n; i++) {
+            sum += nums[i];
+            pSum.add(sum);
+            for (int j = 0; j < pSum.size() - 1; j++)
+                sums.add(sum - pSum.get(j));
+        }
+        Collections.sort(sums);
+        while (left <= right)
+            res = (res + sums.get(left++ - 1)) % mod;
+        return (int) res;
     }
 
     public static void main(String[] args) {
