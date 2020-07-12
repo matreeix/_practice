@@ -37,7 +37,7 @@ public class Solution3 {
 
         @Override
         public int compareTo(Node another) {//优先队列据此方法排序
-            return (int) (dis - another.dis);
+            return Double.compare(another.dis - dis, 0.0);
         }
     }
 
@@ -58,6 +58,7 @@ public class Solution3 {
             adj[b].add(a);
         }
 
+        //使用Dijkstra算法
         dis = new double[n];
         Arrays.fill(dis, 0.0);
 
@@ -70,7 +71,7 @@ public class Solution3 {
 
         PriorityQueue<Node> pq = new PriorityQueue<Node>();
         pq.add(new Node(start, 0.0));
-        while (!pq.isEmpty()) {//用优先队列找到当前未访问的dis值最小的节点
+        while (!pq.isEmpty()) {//用优先队列找到当前未访问的dis值最大的节点
             int cur = pq.remove().v;
             if (visited[cur]) continue;//已访问的节点跳到下一个循环
 
@@ -156,13 +157,111 @@ public class Solution3 {
                 }
         }
     }*/
+
+
+    //更清晰的Dijkstra算法解法
+    public double maxProbability2(int n, int[][] edges, double[] succProb, int start, int end) {
+        PriorityQueue<double[]> pq = new PriorityQueue<double[]>((a, b) -> ((int) ((b[1] - a[1]) * 1000000000)));
+        Map<Integer, Map<Integer, Double>> g = buildGraph(edges, succProb);
+        pq.offer(new double[]{start, 1.0});
+        Set<Integer> vs = new HashSet<>();
+        Map<Integer, Double> probs = new HashMap<>();
+        probs.put(start, 1.0);
+        while (!pq.isEmpty()) {
+            double[] curr = pq.poll();
+            if (vs.contains((int) curr[0])) continue;
+            vs.add((int) curr[0]);
+            if (((int) curr[0]) == end) return curr[1];
+            for (int neig : g.getOrDefault((int) curr[0], new HashMap<>()).keySet()) {
+                if (vs.contains(neig)) continue;
+                double prob = curr[1] * g.get((int) curr[0]).get(neig);
+                if (prob > probs.getOrDefault(neig, 0.0)) {
+                    probs.put(neig, prob);
+                    pq.offer(new double[]{neig, prob});
+                }
+            }
+        }
+        return 0;
+    }
+
+    private Map<Integer, Map<Integer, Double>> buildGraph(int[][] edges, double[] succProb) {
+        Map<Integer, Map<Integer, Double>> g = new HashMap<>();
+        for (int i = 0; i < edges.length; i++) {
+            g.computeIfAbsent(edges[i][0], k -> new HashMap<>());
+            g.computeIfAbsent(edges[i][1], k -> new HashMap<>());
+            g.get(edges[i][0]).put(edges[i][1], succProb[i]);
+            g.get(edges[i][1]).put(edges[i][0], succProb[i]);
+        }
+        return g;
+    }
+
+    /**
+     * 使用BFS，思路：
+     * 1.马尔可夫链
+     * 2.简单来说，BFS在每个阶段都需要记住两件事：当前节点 + 该节点上的当前概率
+     * 3.可以从多条路径到达一个节点，我们不能简单地使用访问数组或集合来避免重复。
+     * 4.我们可以做的是记录“ 到目前为止每个节点的最佳概率 ”。然后仅在以下情况下添加到BFS队列中：它可以为该当前节点提供更好的概率。
+     * <p>
+     * linked：https://leetcode.com/problems/path-with-maximum-probability/discuss/731626/Java-Detailed-Explanation-BFS
+     */
+    class State {
+        int node;
+        double prob;
+
+        State(int _node, double _prob) {
+            node = _node;
+            prob = _prob;
+        }
+    }
+
+    public double maxProbability3(int n, int[][] edges, double[] succProb, int start, int end) {
+
+        // build graph -> double[0]: node, double[1]: edge prob
+        Map<Integer, List<double[]>> map = new HashMap<>();
+        for (int i = 0; i < edges.length; ++i) {
+            int[] edge = edges[i];
+
+            map.putIfAbsent(edge[0], new ArrayList<>());
+            map.putIfAbsent(edge[1], new ArrayList<>());
+
+            map.get(edge[0]).add(new double[]{edge[1], succProb[i]});
+            map.get(edge[1]).add(new double[]{edge[0], succProb[i]});
+        }
+
+        double[] probs = new double[n];  // best prob so far for each node
+        Queue<State> queue = new LinkedList<>();
+        queue.add(new State(start, 1.0));
+
+        while (!queue.isEmpty()) {
+
+            State state = queue.poll();
+            int parent = state.node;
+            double prob = state.prob;
+
+            for (double[] child : map.getOrDefault(parent, new ArrayList<>())) {
+                // add to queue only if: it can make a better prob
+                if (probs[(int) child[0]] >= prob * child[1]) continue;
+
+                queue.add(new State((int) child[0], prob * child[1]));
+                probs[(int) child[0]] = prob * child[1];
+            }
+        }
+        return probs[end];
+    }
+
     public static void main(String[] args) {
-        int n = 3;
-        int[][] edges = {{0, 1}, {1, 2}, {0, 2}};
-        double[] succProb = {0.5, 0.5, 0.2};
-        int start = 0, end = 2;
+//        int n = 3;
+//        int[][] edges = {{0, 1}, {1, 2}, {0, 2}};
+//        double[] succProb = {0.5, 0.5, 0.2};
+//        int start = 0, end = 2;
+
+        int n = 6;
+        int[][] edges = {{0, 1}, {0, 2}, {0, 3}, {4, 1}, {3, 2}, {4, 2}, {4, 5}, {3, 5}};
+        double[] succProb = {0.2, 0.8, 0.1, 0.1, 0.5, 0.9, 0.2, 0.1};
+        int start = 1, end = 5;
 
         Solution3 solution3 = new Solution3();
-        System.out.println(solution3.maxProbability(n, edges, succProb, start, end));
+        System.out.println(solution3.maxProbability(n, edges, succProb, start, end));//0.0288
+
     }
 }
