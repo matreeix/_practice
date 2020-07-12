@@ -1,4 +1,4 @@
-package _contest._biweekly._30;
+package _CONTEST._biweekly._30;
 
 /**
  * @Description: 重新格式化日期

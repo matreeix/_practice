@@ -1,4 +1,4 @@
-package _contest._biweekly._30;
+package _CONTEST._biweekly._30;
 
 /**
  * @Description: 石头游戏IV
