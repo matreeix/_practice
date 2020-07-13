@@ -17,7 +17,7 @@ public class Solution4 {
     /**
      * 思路：梯度下降算法
      * 1.搜索精度较低的大区域
-     * 2.一旦获得最接近的点，以更高的精度搜索该点(x10)
+     * 2.一旦获得最接近的点，以更高的精度搜索该点附近区域(x10)
      */
     public static double getMinDistSum(int[][] positions) {
         double left = 100, bottom = 100, right = 0, top = 0;

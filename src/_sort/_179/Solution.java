@@ -1,4 +1,4 @@
-package _other._179;
+package _sort._179;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -10,6 +10,7 @@ import java.util.Comparator;
  */
 public class Solution {
 
+    //排序+比较器
     public String largestNumber(int[] num) {
         if (num == null || num.length == 0)
             return "";
@@ -42,11 +43,44 @@ public class Solution {
 
     }
 
+    //简写
     public String largestNumber2(int[] num) {
         String[] array = Arrays.stream(num).mapToObj(String::valueOf).toArray(String[]::new);
         Arrays.sort(array, (String s1, String s2) -> (s2 + s1).compareTo(s1 + s2));
         return Arrays.stream(array).reduce((x, y) -> x.equals("0") ? y : x + y).get();
+    }
 
+    //自己实现排序
+    private boolean cmp(int a, int b) {
+        long A = a * 10l, B = b * 10l;
+        int a_ = a, b_ = b;
+        while ((a_ /= 10) > 0) B *= 10;
+        while ((b_ /= 10) > 0) A *= 10;
+        return (A + b) > (B + a);
+    }
+
+    private void sort(int[] nums, int l, int r) {
+        if (l >= r - 1) return;
+        int m = l + (r - l) / 2;
+        sort(nums, l, m);
+        sort(nums, m, r);
+        int[] aux = new int[r - l];
+        for (int i = l, j = m, k = 0; i < m || j < r; ) {
+            if (i < m && (j == r || cmp(nums[i], nums[j]))) aux[k++] = nums[i++];
+            else if (j < r)
+                aux[k++] = nums[j++];
+        }
+        for (int i = 0; l < r; ++i)
+            nums[l++] = aux[i];
+    }
+
+    public String largestNumber3(int[] nums) {
+        sort(nums, 0, nums.length);
+        if (nums[0] == 0) return "0";
+        StringBuilder res = new StringBuilder();
+        for (int i = 0; i < nums.length; ++i)
+            res.append(nums[i]);
+        return res.toString();
     }
 
 
