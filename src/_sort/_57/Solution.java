@@ -66,11 +66,11 @@ public class Solution {
         int left, right;
         left = binarySearch(intervals, 1, newInterval[0], 0, n - 1);//和新区间相交的第一个子区间索引
         right = binarySearch(intervals, 0, newInterval[1], 0, n - 1);//和新区间相交的最后一个子区间索引
+        System.out.println("left:"+left);
+        System.out.println("right:"+right);
 
         int len = left + 1 + (n - 1 - right);
         int[][] a = new int[len][2];
-        System.out.println(left);
-        System.out.println(right);
         int min = Math.min(newInterval[0], intervals[left][0]);
         int max = Math.max(newInterval[1], intervals[right][1]);
         for (int i = 0; i < len; i++) {
@@ -95,12 +95,14 @@ public class Solution {
                 return mid;
             }
         }
+        System.out.println("l:" + l);
+        System.out.println("r:" + r);
         return mark == 0 ? r : l;
     }
 
     public static void main(String[] args) {
         int[][] intervals = {{1, 2}, {3, 4}, {6, 7}, {8, 10}, {12, 16}};
-        int[] newInterval = {15, 17};
+        int[] newInterval = {9, 11};
 
 //        int[][] intervals = {{1, 3}, {6, 9}};
 //        int[] newInterval = {2, 5};
