@@ -29,6 +29,7 @@ public class Solution {
         return helper(piles, 0, 1);
     }
 
+    //从索引i开始，最多可以取2M个石头能获得的最多石头
     private int helper(int[] a, int i, int M) {
         if (i == a.length) return 0;
         if (2 * M >= a.length - i) {
