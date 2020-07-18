@@ -37,7 +37,7 @@ public class Solution {
     //二维dp
     public boolean stoneGame2(int[] p) {
         int n = p.length;
-        int[][] dp = new int[n][n];
+        int[][] dp = new int[n][n];//dp[i][j]表示在[i,j]间亚历克斯能得到最多数的石子数
         for (int i = 0; i < n; i++)
             dp[i][i] = p[i];
         for (int d = 1; d < n; d++)
@@ -53,6 +53,23 @@ public class Solution {
             for (int i = 0; i < p.length - d; i++)
                 dp[i] = Math.max(p[i] - dp[i + 1], p[i + d] - dp[i]);
         return dp[0] > 0;
+    }
+
+    //双dp
+    public static int stoneGame4(int[] arr) {
+        if (arr == null || arr.length == 0) {
+            return 0;
+        }
+        int[][] f = new int[arr.length][arr.length];//先拿的解空间矩阵
+        int[][] s = new int[arr.length][arr.length];//后拿的解空间矩阵
+        for (int j = 0; j < arr.length; j++) {
+            f[j][j] = arr[j];
+            for (int i = j - 1; i >= 0; i--) {//i <= j,因为i在前，j在后
+                f[i][j] = Math.max(arr[i] + s[i + 1][j], arr[j] + s[i][j - 1]);
+                s[i][j] = Math.min(f[i + 1][j], f[i][j - 1]);
+            }
+        }
+        return Math.max(f[0][arr.length - 1], s[0][arr.length - 1]);
     }
 
 
