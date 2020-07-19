@@ -67,7 +67,7 @@ public class Solution {
 
     //1.遍历字符串，记录每个字符的最后一个索引。
     //2.使用指针记录当前子字符串的结尾。
-    public List<Integer> partitionLabels2(String S) {
+    public static List<Integer> partitionLabels2(String S) {
         if (S == null || S.length() == 0) return null;
 
         List<Integer> list = new ArrayList<>();
@@ -90,9 +90,11 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int[][] intervals = {{1, 2}, {3, 3}, {4, 5}, {5, 6}};
-        String S = "ababcbacadefegdehijhklij";
-        System.out.println(partitionLabels(S));
+//        int[][] intervals = {{1, 2}, {3, 3}, {4, 5}, {5, 6}};
+//        String S = "ababcbacadefegdehijhklij";
+//        System.out.println(partitionLabels(S));
 //        System.out.println(Arrays.deepToString(merge(intervals)));
+        String s = "abbaccd";
+        System.out.println(partitionLabels2(s));
     }
 }
