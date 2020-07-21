@@ -17,6 +17,7 @@ import java.util.List;
  */
 
 public class Solution3 {
+    //未完成的解法
     public static List<String> maxNumOfSubstrings(String S) {
         if (S == null || S.length() == 0) return null;
 
@@ -53,31 +54,34 @@ public class Solution3 {
         return list;
     }
 
+
     private int checkSubstr(String s, int i, int l[], int r[]) {
         int right = r[s.charAt(i) - 'a'];
         for (int j = i; j <= right; ++j) {
-            if (l[s.charAt(j) - 'a'] < i)
+            if (l[s.charAt(j) - 'a'] < i)//[j....i.....j....i]
                 return -1;
-            right = Math.max(right, r[s.charAt(j) - 'a']);
+            right = Math.max(right, r[s.charAt(j) - 'a']);//[i.....j....i....j]
         }
         return right;
     }
 
+    //贪心+双指针
     public List<String> maxNumOfSubstrings2(String s) {
-        int l[] = new int[26], r[] = new int[26];
+        int[] l = new int[26];
+        int[] r = new int[26];
         Arrays.fill(l, s.length());
         List<String> res = new ArrayList<String>();
         for (int i = 0; i < s.length(); ++i) {
             int ch = s.charAt(i) - 'a';
-            l[ch] = Math.min(l[ch], i);
-            r[ch] = Math.max(r[ch], i);
+            l[ch] = Math.min(l[ch], i);//字母首次出现的位置
+            r[ch] = Math.max(r[ch], i);//字母最后出现的位置
         }
         int right = s.length();
         for (int i = 0; i < s.length(); ++i)
             if (i == l[s.charAt(i) - 'a']) {
                 int new_right = checkSubstr(s, i, l, r);
                 if (new_right != -1) {
-                    if (i > right || res.isEmpty())
+                    if (i > right || res.isEmpty())//超出范围
                         res.add("");
                     right = new_right;
                     res.set(res.size() - 1, s.substring(i, right + 1));
@@ -97,4 +101,3 @@ public class Solution3 {
 
     }
 }
-
