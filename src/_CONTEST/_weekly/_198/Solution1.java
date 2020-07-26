@@ -11,6 +11,7 @@ package _CONTEST._weekly._198;
  */
 
 public class Solution1 {
+    //模拟法，O(logN)
     public static int numWaterBottles(int numBottles, int numExchange) {
         if (numBottles < numExchange) return numBottles;
         int res = numBottles;
@@ -20,6 +21,11 @@ public class Solution1 {
             empty = empty % numExchange + empty / numExchange;
         }
         return res;
+    }
+
+    //数学法
+    public static int numWaterBottles2(int numBottles, int numExchange) {
+        return numBottles + (numBottles - 1) / (numExchange - 1);
     }
 
     public static void main(String[] args) {
