@@ -17,6 +17,7 @@ package _CONTEST._weekly._199;
  */
 
 public class Solution2 {
+    //贪心算法
     public static int minFlips(String target) {
         char mark = '0';
         int res = 0;
@@ -29,6 +30,17 @@ public class Solution2 {
             }
         }
         return res;
+    }
+
+    //精简写法
+    public int minFlips2(String target) {
+        int cnt = 0, state = 0;
+        for (char b : target.toCharArray())
+            if (b - '0' != state) {
+                state = b - '0';
+                ++cnt;
+            }
+        return cnt;
     }
 
     public static void main(String[] args) {
