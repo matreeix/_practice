@@ -49,7 +49,15 @@ public class Solution2 {
         return sum;
     }
 
-    //前缀和,O(n)
+    //前缀和,O(n)，
+    //cur = 0如果当前前缀总和是偶数，
+    //cur = 1并且当前前缀总和是奇数，
+    //count[0]则偶数前缀总和
+    //count[1]的数量是奇数前缀总和的数量
+    //
+    //对于：数组A中的每个元素：
+    //如果当前前缀和为偶数，则res + =奇数前缀和的数量；
+    //如果当前前缀和为奇数，则res + =偶数前缀和的数量
     public int numOfSubarrays3(int[] A) {
         int cur = 0, res = 0, count[] = {1, 0}, mod = (int)1e9 + 7;
         for (int a: A) {
