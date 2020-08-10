@@ -10,6 +10,7 @@ package _CONTEST._biweekly._32;
  */
 
 public class Solution1 {
+    //暴力解法
     public static int findKthPositive(int[] arr, int k) {
         int idx = 0;
         for (int i = 1; i < 3000; i++) {
@@ -23,10 +24,23 @@ public class Solution1 {
         return -1;
     }
 
+    //二分搜索
+    public static int findKthPositive2(int[] A, int k) {
+        int l = 0, r = A.length, m;
+        while (l < r) {
+            m = (l + r + 1) / 2;
+            if (m == 0 || A[m - 1] - m < k)//左边界
+                l = m;
+            else//A[m - 1] - m >= k,右边界
+                r = m - 1;
+        }
+        return l + k;
+    }
+
 
     public static void main(String[] args) {
         int[] arr = {2, 3, 4, 7, 11};
-        int k = 5;
-        System.out.println(findKthPositive(arr, k));
+        int k = 1;
+        System.out.println(findKthPositive2(arr, k));
     }
 }
