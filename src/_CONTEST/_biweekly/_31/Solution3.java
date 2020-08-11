@@ -7,7 +7,7 @@ import java.util.Set;
  * @Description: 1525. 字符串的好分割数目
  * 给你一个字符串 s ，一个分割被称为 「好分割」 当它满足：将 s 分割成 2 个字符串 p 和 q ，它们连接起来等于 s 且 p 和 q 中不同字符的数目相同。
  * 请你返回 s 中好分割的数目。
- * @Author: Pythagodzilla
+ * @Author: caffebaby
  * @Date: 2020/7/27
  */
 

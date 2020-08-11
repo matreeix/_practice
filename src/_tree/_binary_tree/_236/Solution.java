@@ -2,7 +2,7 @@ package _tree._binary_tree._236;
 
 /**
  * @Description: 求二叉树俩节点的最近公共祖先
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/26
  */
 public class Solution {

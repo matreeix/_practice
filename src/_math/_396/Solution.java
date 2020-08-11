@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Description: 旋转函数
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/5/15
  */
 public class Solution {

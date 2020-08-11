@@ -10,7 +10,7 @@ import java.util.Arrays;
  * 3.MAX在步骤2中更新获得距离之间的值。
  * <p>
  * 时间复杂度：max（O（nlogn），O（mlogn）），m是房屋的长度，n是加热器的长度。
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/13
  */
 public class Solution {

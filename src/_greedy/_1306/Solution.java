@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * @Description:跳跃游戏Ⅲ 给定一个非负整数数组arr，您最初位于数组的start索引处。当位于的索引是i时，可以跳至i + arr[i]或i - arr[i]的索引位置，
  * 检查是否可以到达任何值为0的索引。请注意，您无法跳出阵列。
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/4
  */
 public class Solution {

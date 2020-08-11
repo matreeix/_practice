@@ -6,7 +6,7 @@ package _DP._123;
  * 设计一个算法来计算你所能获取的最大利润。你最多可以完成 两笔 交易。
  * 注意: 你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
  *
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/4/13
  */
 public class Solution {

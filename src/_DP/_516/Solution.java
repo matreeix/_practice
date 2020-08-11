@@ -2,7 +2,7 @@ package _DP._516;
 
 /**
  * @Description: 最长回文子序列
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/4/17
  */
 public class Solution {

@@ -8,7 +8,7 @@ import java.util.*;
  * 1. 每行必须包含数字，1-9不能重复。
  * 2.每列必须包含数字，1-9 不能重复。
  * 3.3x3网格的9个子框中的每个必须包含数字，且1-9不能重复。
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/10/17 0:10
  */
 public class Solution {

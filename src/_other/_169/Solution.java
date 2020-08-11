@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  * @Description: 找出数组中个数超过一半的元素
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/7/27 22:18
  */
 public class Solution {

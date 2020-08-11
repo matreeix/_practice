@@ -2,7 +2,7 @@ package _DP._552;
 
 /**
  * @Description: 学生出勤记录II
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 5/11/2020
  */
 public class Solution {

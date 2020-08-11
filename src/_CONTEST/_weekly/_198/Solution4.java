@@ -17,7 +17,7 @@ import java.util.Set;
  * 1 <= arr[i] <= 10^6
  * 0 <= target <= 10^7
  *
- * @Author: Pythagodzilla
+ * @Author: caffebaby
  * @Date: 2020/7/19
  */
 

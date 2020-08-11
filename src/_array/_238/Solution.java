@@ -2,7 +2,7 @@ package _array._238;
 
 /**
  * @Description: 数组除自身外的乘积
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/2/21
  */
 public class Solution {

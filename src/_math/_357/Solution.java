@@ -4,7 +4,7 @@ package _math._357;
  * @Description: 各位数都不同的数字个数
  * <p>
  * 给定一个非负整数 n，计算各位数字都不同的数字 x 的个数，其中 0 ≤ x < 10^n 。
- * @Author: Pythagodzilla
+ * @Author: caffebaby
  * @Date: 2020/7/18
  */
 

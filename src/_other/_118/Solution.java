@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @Description: 生成杨辉三角
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/8/9 22:41
  */
 public class Solution {

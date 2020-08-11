@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Description: 下一个排列
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/6/11
  */
 public class Solution {

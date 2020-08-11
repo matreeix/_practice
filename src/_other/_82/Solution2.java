@@ -2,7 +2,7 @@ package _other._82;
 
 /**
  * @Description: 递归求解
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/8/14 20:35
  */
 public class Solution2 {

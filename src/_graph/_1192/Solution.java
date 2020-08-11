@@ -19,7 +19,7 @@ import java.util.List;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/critical-connections-in-a-network
  *
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/2/8
  */
 public class Solution {

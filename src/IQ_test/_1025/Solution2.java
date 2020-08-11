@@ -2,7 +2,7 @@ package IQ_test._1025;
 
 /**
  * @Description: 使用动态规划解决
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/2/24
  */
 public class Solution2 {

@@ -7,7 +7,7 @@ package _tree._binary_tree._671;
  * 2.root.val = min(root.left.val, root.right.val)
  * 3.节点的值为非负整数
  *
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/25
  */
 public class Solution {

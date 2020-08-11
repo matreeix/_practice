@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * @Description: 分数转成小数
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/4
  */
 public class Solution {

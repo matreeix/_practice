@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @Description: 求BST的众数，即出现次数最多的节点值
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/27
  */
 public class Solution {

@@ -2,7 +2,7 @@ package _sort._21;
 
 /**
  * @Description: 归并两个有序链表
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/8/10 21:55
  */
 public class Solution {

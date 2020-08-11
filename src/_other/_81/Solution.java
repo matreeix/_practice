@@ -2,7 +2,7 @@ package _other._81;
 
 /**
  * @Description: 和问题33类似，不过含有重复数字
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/9/1 10:01
  */
 public class Solution {

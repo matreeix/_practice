@@ -11,7 +11,7 @@ package _math._640;
  * <p>
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/solve-the-equation
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/5/31
  */
 public class Solution {

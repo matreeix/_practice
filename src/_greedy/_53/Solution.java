@@ -2,7 +2,7 @@ package _greedy._53;
 
 /**
  * @Description: 最大子序和
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/4/14
  */
 public class Solution {

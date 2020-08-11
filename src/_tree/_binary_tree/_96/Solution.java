@@ -2,7 +2,7 @@ package _tree._binary_tree._96;
 
 /**
  * @Description: 对于给定的n，有多少个BST可以存储值1到n
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/22
  */
 

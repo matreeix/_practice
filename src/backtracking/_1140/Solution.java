@@ -8,7 +8,7 @@ package backtracking._1140;
  * 在每个玩家的回合中，该玩家可以拿走剩下的前 X 堆的所有石子，其中 1 <= X <= 2M。然后，令 M = max(M, X)。
  * 游戏一直持续到所有石子都被拿走。
  * 假设亚历克斯和李都发挥出最佳水平，返回亚历克斯可以得到的最大数量的石头。
- * @Author: Pythagodzilla
+ * @Author: caffebaby
  * @Date: 2020/7/16
  */
 

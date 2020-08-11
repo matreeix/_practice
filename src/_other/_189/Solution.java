@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Description: 将一个数组向右“前进”k步
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/7/31 20:13
  */
 public class Solution {

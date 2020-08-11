@@ -10,7 +10,7 @@ package _tree._binary_tree._105;
  * 现在我们知道IN[5]是根，所以我们知道IN[0]-IN[4]在左侧，后面的IN[6-]在右侧。
  * 在子数组上递归执行此操作，我们可以在其中构建一棵树:)
  *
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/2/15
  */
 public class Solution {

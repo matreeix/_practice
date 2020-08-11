@@ -7,7 +7,7 @@ package _DP._309;
  * 1.你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
  * 2.卖出股票后，你无法在第二天买入股票 (即冷冻期为 1 天)。
  *
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/4/13
  */
 public class Solution {

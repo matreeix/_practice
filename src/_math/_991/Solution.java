@@ -8,7 +8,7 @@ package _math._991;
  * 若Y为奇数就减半，否则就加一，
  * 显然这就是最快的算法
  *
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/21
  */
 public class Solution {

@@ -5,7 +5,7 @@ import java.util.List;
 
 /*
  * @Description: 1<=nums[i]<=n,且元素最多重复一次，找出[1,n]中未出现的整数
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/7/29 22:29
  */
 public class Solution {

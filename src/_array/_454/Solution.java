@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * @Description: 四数相加 II
  * @linked: https://leetcode-cn.com/problems/4sum-ii/solution/chao-ji-rong-yi-li-jie-de-fang-fa-si-shu-xiang-jia/
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 5/14/2020
  */
 public class Solution {

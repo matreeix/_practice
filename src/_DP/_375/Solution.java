@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Description: 猜中数字付出的最小代价
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/18
  */
 

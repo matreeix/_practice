@@ -8,7 +8,7 @@ import java.util.List;
  * @Description: Merge Intervals
  * <p>
  * Given a collection of intervals, merge all overlapping intervals.
- * @Author: Pythagodzilla
+ * @Author: caffebaby
  * @Date: 2020/7/13
  */
 

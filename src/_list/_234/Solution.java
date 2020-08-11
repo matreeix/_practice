@@ -2,7 +2,7 @@ package _list._234;
 
 /**
  * @Description: 判断回文链表
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/8/24 22:13
  */
 public class Solution {

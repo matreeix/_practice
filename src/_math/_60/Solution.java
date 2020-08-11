@@ -18,7 +18,7 @@ import java.util.List;
  * "321"
  * <p>
  * 给定 n 和 k，返回第 k 个排列。
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/6/8
  */
 public class Solution {

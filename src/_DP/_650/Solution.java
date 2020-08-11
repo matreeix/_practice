@@ -10,7 +10,7 @@ package _DP._650;
  * <p>
  * 给出一个数字n。您必须通过执行允许的最少步骤数。输出最小步数以获得n个"A"。
  *
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/19
  */
 

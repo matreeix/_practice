@@ -4,7 +4,7 @@ import java.util.Stack;
 
 /**
  * @Description: 递归版本
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/8/22 21:57
  */
 public class Solution2 {

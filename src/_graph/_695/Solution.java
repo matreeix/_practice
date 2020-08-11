@@ -2,7 +2,7 @@ package _graph._695;
 
 /**
  * @Description: 求岛屿的最大面积
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/2/5
  */
 public class Solution {

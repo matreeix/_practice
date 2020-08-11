@@ -7,7 +7,7 @@ import java.util.Arrays;
  * <p>
  * 给定一个A 非负整数数组，A中一半的整数是奇数，而一半的整数是偶数。
  * 对数组进行排序，以使每当A[i]为奇数时i为奇数；每当A[i]为偶数，i为偶数。
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/8
  */
 public class Solution {

@@ -2,7 +2,7 @@ package backtracking._37;
 
 /**
  * @Description: 数独的解法
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/10/18 0:03
  */
 public class Solution {

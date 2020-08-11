@@ -2,7 +2,7 @@ package _string._67;
 
 /**
  * @Description: 将两个二进制数字的字符串加和
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/1
  */
 public class Solution {

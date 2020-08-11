@@ -2,7 +2,7 @@ package _other._141;
 
 /**
  * @Description: 判断链表是否存在环
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/8/13 20:31
  */
 public class Solution {

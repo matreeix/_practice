@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 「超赞子字符串」需满足满足下述两个条件：
  * 1.该字符串是 s 的一个非空子字符串
  * 2.进行任意次数的字符交换重新排序后，该字符串可以变成一个回文字符串
- * @Author: Pythagodzilla
+ * @Author: caffebaby
  * @Date: 2020/8/8
  */
 

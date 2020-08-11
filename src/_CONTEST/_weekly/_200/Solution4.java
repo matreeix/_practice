@@ -12,7 +12,7 @@ package _CONTEST._weekly._200;
  * 请你返回所有可能合法路径中的最大得分。
  * <p>
  * 由于答案可能很大，请你将它对 10^9 + 7 取余后返回。
- * @Author: Pythagodzilla
+ * @Author: caffebaby
  * @Date: 2020/8/2
  */
 

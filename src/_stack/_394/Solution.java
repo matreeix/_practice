@@ -4,7 +4,7 @@ import java.util.Stack;
 
 /**
  * @Description: 字符串的解码
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/6/4
  */
 public class Solution {

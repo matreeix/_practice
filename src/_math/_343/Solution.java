@@ -5,7 +5,7 @@ package _math._343;
  * 给定一个正整数n，将其分解为至少两个正整数的和，
  * 并使这些整数的乘积最大化。返回您可以获得的最大值
  *
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/11
  */
 public class Solution {

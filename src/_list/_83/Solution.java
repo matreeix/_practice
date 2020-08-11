@@ -2,7 +2,7 @@ package _list._83;
 
 /**
  * @Description: 从有序链表里删除多余的重复节点
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/8/13 23:21
  */
 public class Solution {

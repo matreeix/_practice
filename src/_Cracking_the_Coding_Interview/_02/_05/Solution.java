@@ -5,7 +5,7 @@ package _Cracking_the_Coding_Interview._02._05;
  * 给定两个用链表表示的整数，每个节点包含一个数位。
  * 这些数位是 反向 存放的，也就是个位排在链表首部。
  * 编写函数对这两个整数求和，并用链表形式返回结果。
- * @Author: Pythagodzilla
+ * @Author: caffebaby
  * @Date: 2020/7/31
  */
 

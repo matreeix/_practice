@@ -2,7 +2,7 @@ package _DP._1137;
 
 /**
  * @Description: 泰波那契数
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/4/22
  */
 public class Solution {

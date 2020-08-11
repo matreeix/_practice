@@ -2,7 +2,7 @@ package _list._92;
 
 /**
  * @Description: 使用虚拟头结点
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/8/4 23:51
  */
 public class Soluton2 {

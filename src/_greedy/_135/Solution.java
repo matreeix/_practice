@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Description: 分发糖果
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/6/6
  */
 public class Solution {

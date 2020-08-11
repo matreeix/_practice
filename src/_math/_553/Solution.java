@@ -2,7 +2,7 @@ package _math._553;
 
 /**
  * @Description: 最优除法
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/5/16
  */
 public class Solution {

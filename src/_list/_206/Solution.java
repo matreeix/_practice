@@ -2,7 +2,7 @@ package _list._206;
 
 /**
  * @Description: 反转链表
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/8/4 18:37
  */
 public class Solution {

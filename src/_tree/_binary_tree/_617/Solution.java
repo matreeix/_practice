@@ -2,7 +2,7 @@ package _tree._binary_tree._617;
 
 /**
  * @Description: 合并两个二叉树
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/25
  */
 public class Solution {

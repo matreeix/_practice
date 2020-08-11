@@ -14,7 +14,7 @@ package _CONTEST._weekly._201;
  * S3 = "0111001"
  * S4 = "011100110110001"
  * 请你返回  Sn 的 第 k 位字符 ，题目数据保证 k 一定在 Sn 长度范围以内。
- * @Author: Pythagodzilla
+ * @Author: caffebaby
  * @Date: 2020/8/9
  */
 

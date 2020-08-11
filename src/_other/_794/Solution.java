@@ -7,7 +7,7 @@ package _other._794;
  * 当任何值达到-3时，表示O获胜。
  * 当X获胜时，O不能再移动，所以turns必须是1.当O获胜时，X不能再移动，所以turns必须为0.最后，
  * 当我们返回时，turns必须是0或1，并且X和O不能同时获胜。
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/8/24 22:12
  */
 public class Solution {

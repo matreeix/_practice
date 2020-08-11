@@ -2,7 +2,7 @@ package _list._206;
 
 /**
  * @Description: 递归的方式
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/8/4 18:39
  */
 public class Solution2 {

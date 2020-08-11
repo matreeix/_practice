@@ -7,7 +7,7 @@ import java.util.Queue;
 
 /**
  * @Description: 找到二叉树每层的最大值
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/10
  */
 public class Solution {

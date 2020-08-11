@@ -3,7 +3,7 @@ package _math._1015;
 /**
  * @Description: 给定正整数 K，你需要找出可以被 K 整除的、仅包含数字 1 的最小正整数 N。
  * 返回 N 的长度。如果不存在这样的 N，就返回 -1。
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/4/28
  */
 public class Solution {

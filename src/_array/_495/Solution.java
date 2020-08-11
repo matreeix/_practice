@@ -2,7 +2,7 @@ package _array._495;
 
 /**
  * @Description: 提莫攻击，计算中毒持续时间
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/2/28
  */
 public class Solution {

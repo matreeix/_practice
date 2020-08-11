@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Description: 将m*n数组按照原序列变成r*c数组
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/7/26 21:04
  */
 public class Solution {

@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @Description: n叉树的最大深度
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/4/2
  */
 public class Solution {

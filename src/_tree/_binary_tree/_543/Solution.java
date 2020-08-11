@@ -2,7 +2,7 @@ package _tree._binary_tree._543;
 
 /**
  * @Description: 求二叉树的直径，即俩节点的最长距离
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/27
  */
 public class Solution {

@@ -2,7 +2,7 @@ package _list._19;
 
 /**
  * @Description: 删除链表的倒数第N个节点
- * @Author: Pythagodzilla
+ * @Author: caffebaby
  * @Date: 2020/6/22
  */
 

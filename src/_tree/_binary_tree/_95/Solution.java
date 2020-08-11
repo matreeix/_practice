@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * @Description: 对于给定的n，得到所有的BST可以存储值1到n
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/22
  */
 public class Solution {

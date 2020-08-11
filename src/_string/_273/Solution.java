@@ -5,7 +5,7 @@ import java.util.Stack;
 
 /**
  * @Description: 数字翻译成英文
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/3
  */
 public class Solution {

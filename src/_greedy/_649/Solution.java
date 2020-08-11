@@ -6,7 +6,7 @@ import java.util.*;
  * @Description: Dota2的参议院
  * <p>
  * 思路：使用贪心策略，当前选手尽量ban掉后面最靠近的对手，使其丧失ban队友的机会
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/6/1
  */
 public class Solution {

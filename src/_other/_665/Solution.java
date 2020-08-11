@@ -2,7 +2,7 @@ package _other._665;
 
 /**
  * @Description: 最多修改一个元素使数列不减
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/8/6 23:52
  */
 public class Solution {

@@ -2,7 +2,7 @@ package _other._100;
 
 /**
  * @Description: 判断两个树是否相同（结构和值）
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/10/18 20:59
  */
 public class Solution {

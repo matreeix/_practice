@@ -2,7 +2,7 @@ package _tree._binary_tree._669;
 
 /**
  * @Description: 在指定范围内修剪BST
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2020/3/25
  */
 public class Solution {

@@ -5,7 +5,7 @@ import java.util.Set;
 
 /**
  * @Description: N皇后问题II
- * @Author: 67ng
+ * @Author: caffebaby
  * @Date: 2019/8/26 21:44
  */
 public class Solution {
