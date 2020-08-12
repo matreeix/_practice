@@ -4,7 +4,7 @@ package _math._258;
  * @Description: 各位相加
  * <p>
  * 给定一个非负整数 num，反复将各个位上的数字相加，直到结果为一位数。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/6/29
  */
 

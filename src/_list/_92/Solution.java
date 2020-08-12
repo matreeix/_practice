@@ -3,7 +3,7 @@ package _list._92;
 /**
  * @Description: 在[m, n]区间翻转链表
  *    不使用虚拟头结点，十分复杂，运行有问题
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/8/4 16:05
  */
 public class Solution {

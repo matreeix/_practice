@@ -2,7 +2,7 @@ package _tree._binary_tree._99;
 
 /**
  * @Description: BST中有两个元素位置错误，在不改变其结构的情况下将其复原
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/3/23
  */
 public class Solution {

@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @Description: 找出数组中所用元素个数超过总数1/3的元素
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/7/27 23:03
  */
 public class Solution {

@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * @Description: 挑选数组的元素相加得到目标数，不限次数
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/1/10
  */
 public class Solution {

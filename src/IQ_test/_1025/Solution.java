@@ -16,7 +16,7 @@ package IQ_test._1025;
  *
  * 分析：爱丽丝只要保证每次返给鲍勃的数是奇数即可保证稳赢。
  *
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/2/24
  */
 public class Solution {

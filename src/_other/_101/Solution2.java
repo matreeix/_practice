@@ -4,7 +4,7 @@ import java.util.Stack;
 
 /**
  * @Description: 非递归
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/10/18 21:21
  */
 public class Solution2 {

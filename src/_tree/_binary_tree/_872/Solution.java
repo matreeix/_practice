@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @Description: 叶子相似的树
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/5/7
  */
 public class Solution {

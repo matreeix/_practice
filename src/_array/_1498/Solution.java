@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 给你一个整数数组 nums 和一个整数 target 。
  * 请你统计并返回 nums 中能满足其最小元素与最大元素的和小于或等于 target 的非空子序列的数目。
  * 由于答案可能很大，请将结果对 10^9 + 7 取余后返回。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/5
  */
 

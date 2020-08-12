@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Description: 用数组组成正方形
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/3/10
  */
 public class Solution {

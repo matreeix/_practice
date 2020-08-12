@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 给定一个二进制字符串  s （仅包含“ 0”和“ 1”的字符串）。
  * 返回所有字符为1的子字符串的数目。
  * 由于答案可能太大，请以10 ^ 9 + 7为模返回。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/12
  */
 

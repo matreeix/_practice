@@ -3,7 +3,7 @@ package _Cracking_the_Coding_Interview._02._06;
 /**
  * @Description: 面试题 02.06. 回文链表
  * 编写一个函数，检查输入的链表是否是回文的。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/31
  */
 

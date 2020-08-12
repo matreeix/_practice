@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Description: 将二维数组有0元素的行列元素全部置为0
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/1/9 22:05
  */
 public class Solution {

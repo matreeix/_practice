@@ -3,7 +3,7 @@ package _Cracking_the_Coding_Interview._01._08;
 /**
  * @Description: 面试题 01.08. 零矩阵
  * 编写一种算法，若M × N矩阵中某个元素为0，则将其所在的行与列清零
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/31
  */
 

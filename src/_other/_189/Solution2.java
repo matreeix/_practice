@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @Description: 我有一种思路：把1换到4的位置，把4换到7.....，每次以k的间隔跳跃交换，
  * 总共交换nums.length次，即得到答案，不过我没写出具体代码，不知道能否实现？是否正确？
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/7/31 21:26
  */
 public class Solution2 {

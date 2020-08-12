@@ -4,7 +4,7 @@ package _greedy._55;
  * @Description:跳跃游戏Ⅰ 给定一个非负整数数组，您最初位于该数组的第一个索引处。
  * 数组中的每个元素代表该位置的最大跳转长度。
  * 确定您是否能够达到最后一个索引。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/3/4
  */
 public class Solution {

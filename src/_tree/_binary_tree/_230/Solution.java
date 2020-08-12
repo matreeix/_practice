@@ -2,7 +2,7 @@ package _tree._binary_tree._230;
 
 /**
  * @Description: 找到BST树中第k小的数
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/3/25
  */
 public class Solution {

@@ -7,7 +7,7 @@ import java.util.Arrays;
  * <p>
  * Given an array nums, you are allowed to choose one element of nums and change it by any value in one move.
  * Return the minimum difference between the largest and smallest value of nums after perfoming at most 3 moves.
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/11
  */
 

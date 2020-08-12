@@ -2,7 +2,7 @@ package _DP._152;
 
 /**
  * @Description: 最大子序列乘积
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/4/14
  */
 public class Solution {

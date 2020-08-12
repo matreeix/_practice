@@ -9,7 +9,7 @@ package _array._162;
  * 你可以假设 nums[-1] = nums[n] = -∞。
  * <p>
  * 扩展：在二维情况下，即在矩阵中寻找极小值。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/5/24
  */
 public class Solution {

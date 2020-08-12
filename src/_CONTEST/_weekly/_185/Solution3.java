@@ -7,7 +7,7 @@ package _CONTEST._weekly._185;
  * 注意：要想发出蛙鸣 "croak"，青蛙必须 依序 输出 ‘c’, ’r’, ’o’, ’a’, ’k’ 这 5 个字母。
  * 如果没有输出全部五个字母，那么它就不会发出声音。
  * 如果字符串 croakOfFrogs 不是由若干有效的 "croak" 字符混合而成，请返回 -1 。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/22
  */
 

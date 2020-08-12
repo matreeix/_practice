@@ -2,7 +2,7 @@ package _tree._binary_tree._106;
 
 /**
  * @Description:已知中后序遍历，求二叉树
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/2/15
  */
 public class Solution {

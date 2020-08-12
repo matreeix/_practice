@@ -2,7 +2,7 @@ package _array._605;
 
 /**
  * @Description: 数组中1代表种了花，0代表为空，相邻之间花不能挨着，求给定数组能否种植n朵花
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/7/26 21:04
  */
 //思路：

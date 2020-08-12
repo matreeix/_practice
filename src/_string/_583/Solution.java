@@ -2,7 +2,7 @@ package _string._583;
 
 /**
  * @Description: 两个字符串删除字符
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/5/22
  */
 public class Solution {

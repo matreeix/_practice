@@ -8,7 +8,7 @@ package _string._921;
  * 它可以被写成 AB （A 与 B 连接）, 其中 A 和 B 都是有效字符串，或者
  * 它可以被写作 (A)，其中 A 是有效字符串。
  * 给定一个括号字符串，返回为使结果字符串有效而必须添加的最少括号数。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/8/10
  */
 

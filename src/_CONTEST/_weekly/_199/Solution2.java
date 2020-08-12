@@ -12,7 +12,7 @@ package _CONTEST._weekly._199;
  * <p>
  * 翻转时，如果灯泡的状态为 0 就变为 1，为 1 就变为 0 。
  * 返回达成 target 描述的状态所需的 最少 翻转次数
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/26
  */
 

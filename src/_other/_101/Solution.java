@@ -2,7 +2,7 @@ package _other._101;
 
 /**
  * @Description: 对称树（递归）
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/10/18 20:59
  */
 public class Solution {

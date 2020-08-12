@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @Description: 判定字符是否唯一
  * 实现一个算法，确定一个字符串 s 的所有字符是否全都不同。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/6/29
  */
 

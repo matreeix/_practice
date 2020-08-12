@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * @Description: 寻找是否存在重复数
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/8/10 9:53
  */
 public class Solution {

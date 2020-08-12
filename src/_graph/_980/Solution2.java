@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Description: 通过状态压缩和记忆化搜索进行优化
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/2/8
  */
 public class Solution2 {

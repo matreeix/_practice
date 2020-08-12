@@ -9,7 +9,7 @@ import java.util.List;
  * @Description: 分区标签
  * <p>
  * S给出一串小写英文字母。我们希望将此字符串分成尽可能多的部分，以使每个字母最多出现在一个部分，并返回代表这些部分大小的整数列表。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/13
  */
 

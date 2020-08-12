@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * @Description: 最短未排序的连续子数组
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/3/7
  */
 public class Solution {

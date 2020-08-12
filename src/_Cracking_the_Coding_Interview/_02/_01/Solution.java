@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * @Description: 面试题 02.01. 移除重复节点
  * 编写代码，移除 未排序 链表中的重复节点。保留最开始出现的节点。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/31
  */
 

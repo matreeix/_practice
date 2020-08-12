@@ -5,7 +5,7 @@ package _string._481;
  * 分析：
  * 易知该字符串是没有循环的。
  * 若有循环，其次数串循环就小于该字符串，就能找到更小的循环，故没有循环。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/5/17
  */
 public class Solution {

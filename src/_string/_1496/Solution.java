@@ -14,7 +14,7 @@ import java.util.*;
  * 注意：
  * 1. 1 <= path.length <= 10^4
  * 2. path 仅由 {'N', 'S', 'E', 'W} 中的字符组成
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/5
  */
 

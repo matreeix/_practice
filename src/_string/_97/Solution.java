@@ -10,7 +10,7 @@ import java.util.Set;
  *
  * 给定三个字符串 s1, s2, s3, 验证 s3 是否是由 s1 和 s2 交错组成的。
  *
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/3/12
  */
 public class Solution {

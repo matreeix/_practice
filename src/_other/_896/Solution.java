@@ -2,7 +2,7 @@ package _other._896;
 
 /**
  * @Description: 求数组是否单调
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/7/27 21:39
  */
 

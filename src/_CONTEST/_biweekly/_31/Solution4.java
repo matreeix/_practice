@@ -6,7 +6,7 @@ package _CONTEST._biweekly._31;
  * 请你返回从 initial 得到  target 的最少操作次数，每次操作需遵循以下规则：
  * 在initial中选择 任意 子数组，并将子数组中每个元素增加 1 。
  * 答案保证在 32 位有符号整数以内。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/27
  */
 

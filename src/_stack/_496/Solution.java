@@ -7,7 +7,7 @@ import java.util.Arrays;
  *
  * s数组1是数组2的子集，在数组2中找到数组1的对应元素后面的更大的元素
  * ，并返回，若不存在就返回-1.
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/8/16 20:38
  */
 public class Solution {

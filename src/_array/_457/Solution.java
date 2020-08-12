@@ -2,7 +2,7 @@ package _array._457;
 
 /**
  * @Description: 环形数组判断
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/2/28
  */
 public class Solution {

@@ -2,7 +2,7 @@ package _graph._488;
 
 /**
  * @Description:
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/2/17
  */
 public class Solution2 {

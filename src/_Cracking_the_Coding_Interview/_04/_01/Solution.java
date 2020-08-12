@@ -8,7 +8,7 @@ import java.util.Set;
 /**
  * @Description: 面试题 04.01. 节点间通路
  * 节点间通路。给定 有向 图，设计一个算法，找出两个节点之间是否存在一条路径
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/8/3
  */
 

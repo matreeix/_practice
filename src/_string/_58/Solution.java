@@ -7,7 +7,7 @@ package _string._58;
  * 如果不存在最后一个单词，请返回 0 。
  * 说明：一个单词是指仅由字母组成、不包含任何空格字符的最大子字符串。
  *
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/24
  */
 

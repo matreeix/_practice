@@ -8,7 +8,7 @@ package _CONTEST._weekly._200;
  * 返回赢得比赛的整数。
  * <p>
  * 题目数据 保证 游戏存在赢家。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/8/2
  */
 

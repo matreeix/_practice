@@ -11,7 +11,7 @@ package _CONTEST._weekly._200;
  * 其中 |x| 表示 x 的绝对值。
  * <p>
  * 返回 好三元组的数量 。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/8/2
  */
 

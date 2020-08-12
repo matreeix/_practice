@@ -4,7 +4,7 @@ package _math._829;
  * @Description: 连续整数求和
  * <p>
  * 给定一个正整数 N，试求有多少组连续正整数满足所有数字之和为 N?
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/7
  */
 

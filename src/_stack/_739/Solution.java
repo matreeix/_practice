@@ -5,7 +5,7 @@ import java.util.Stack;
 
 /**
  * @Description: 等待下一个更高气温的天数（单调栈）
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/3/16
  */
 public class Solution {

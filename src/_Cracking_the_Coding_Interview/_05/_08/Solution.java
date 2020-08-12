@@ -10,7 +10,7 @@ import java.util.Arrays;
  * <p>
  * 给出数组的长度 length，宽度 w（以比特为单位）、直线开始位置 x1（比特为单位）、直线结束位置 x2（比特为单位）、直线所在行数 y。
  * 返回绘制过后的数组。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/31
  */
 

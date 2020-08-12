@@ -6,7 +6,7 @@ import java.util.Queue;
 /**
  * @Description: 判断一棵树是否是完全二叉树(按层遍历时 : 1.有右子树无左子树返回false ; 2.有左子树或无子树时 ， 遍历其后面的所有
  *节点都是叶子结点返回true ， 否则返回false)
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/5/8
  */
 public class Solution {

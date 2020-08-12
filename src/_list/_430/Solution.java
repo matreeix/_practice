@@ -10,7 +10,7 @@ package _list._430;
  * 来源：力扣（LeetCode）
  * 链接：https://leetcode-cn.com/problems/flatten-a-multilevel-doubly-linked-list
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/6/23
  */
 

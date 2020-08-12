@@ -2,7 +2,7 @@ package _other._33;
 
 /**
  * @Description: 查找类似[4,5,6,7,0,1,2]数组的指定数
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/9/1 10:01
  */
 public class Solution {

@@ -4,7 +4,7 @@ import java.util.TreeSet;
 
 /**
  * @Description: 寻找是否存在满足索引和元素值限制的重复数
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/8/10 10:13
  */
 public class Solution {

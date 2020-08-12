@@ -2,7 +2,7 @@ package _math._43;
 
 /**
  * @Description: 字符串的乘法, 其实就是乘法的运算方法
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/7/30 20:21
  */
 public class Solution {

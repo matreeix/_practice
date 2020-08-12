@@ -6,7 +6,7 @@ import java.util.Queue;
 
 /**
  * @Description:课程表Ⅲ
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/3/6
  */
 public class Solution {

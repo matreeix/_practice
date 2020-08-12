@@ -11,7 +11,7 @@ import java.util.*;
  * Given two nodes start and end, find the path with the maximum probability
  * of success to go from start to end and return its success probability.
  * If there is no path from start to end, return 0. Your answer will be accepted if it differs from the correct answer by at most 1e-5.
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/12
  */
 

@@ -8,7 +8,7 @@ import java.util.*;
  * 扩展: 如果文件内容非常大（GB级别），您将如何修改您的解决方案？
  * 解决方案：不存储内容，存储文件的大小，可能重复误判。
  *
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/5/23
  */
 public class Solution {

@@ -2,7 +2,7 @@ package _bit_calc._342;
 
 /**
  * @Description: 判断一个数是否是4的幂次方
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/3/20
  */
 public class Solution {

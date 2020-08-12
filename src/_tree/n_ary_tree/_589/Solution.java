@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * @Description: n叉树的前序遍历
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/3/28
  */
 public class Solution {

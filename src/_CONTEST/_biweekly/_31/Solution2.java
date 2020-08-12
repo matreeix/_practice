@@ -8,7 +8,7 @@ import java.util.List;
  * @Description: 1524. 和为奇数的子数组数目
  * 给你一个整数数组 arr 。请你返回和为 奇数 的子数组数目。
  * 由于答案可能会很大，请你将结果对 10^9 + 7 取余后返回。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/27
  */
 

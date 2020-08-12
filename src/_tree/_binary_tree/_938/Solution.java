@@ -2,7 +2,7 @@ package _tree._binary_tree._938;
 
 /**
  * @Description: 找到指定范围内BST节点值之和
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/3/25
  */
 public class Solution {

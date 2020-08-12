@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * @Description: 对链表排序(归并排序)
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/8/10 21:59
  */
 public class Solution {

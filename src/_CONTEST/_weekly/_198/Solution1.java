@@ -6,7 +6,7 @@ package _CONTEST._weekly._198;
  * 给定numBottles 满水的瓶子，您可以将numExchange空水瓶换成一个满的水瓶。
  * 喝满水的瓶子的操作会将其变成空瓶子。
  * 返回您可以喝的最大水瓶数量。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/19
  */
 

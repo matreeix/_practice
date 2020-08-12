@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * @Description: 485. 最大连续1的个数
  * 给定一个二进制数组， 计算其中最大连续1的个数。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/7/26 22:41
  */
 public class Solution {

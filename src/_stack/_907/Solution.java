@@ -4,7 +4,7 @@ import java.util.Stack;
 
 /**
  * @Description: 求出所有连续子数组中的最小值之和
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/3/15
  */
 public class Solution {

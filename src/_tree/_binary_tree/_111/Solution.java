@@ -2,7 +2,7 @@ package _tree._binary_tree._111;
 
 /**
  * @Description: 求二叉树的最小深度
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/3/26
  */
 public class Solution {

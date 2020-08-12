@@ -2,7 +2,7 @@ package _other._999;
 
 /**
  * @Description: 二维数组中，R在同竖行或横行找邻近第一个字母是p的个数
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/7/25 20:50
  */
 public class Solution {

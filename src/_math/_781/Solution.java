@@ -10,7 +10,7 @@ import java.util.Map;
  * 1.相同数字（num）的元素可归为一类，且该类颜色的兔子数量为 1+num;
  * 2.根据1，若有相同数字的元素个数大于1+num,则要划分为两类或者更多类别;
  * 3.根据1，元素个数小于等于1，不足的元素个数要补足
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/6/4
  */
 public class Solution {

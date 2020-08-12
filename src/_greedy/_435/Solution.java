@@ -7,7 +7,7 @@ import static java.lang.Float.NaN;
 
 /**
  * @Description: 无重叠区间
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 5/12/2020
  */
 public class Solution {

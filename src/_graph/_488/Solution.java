@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @Description: 祖玛游戏
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/2/17
  */
 public class Solution {

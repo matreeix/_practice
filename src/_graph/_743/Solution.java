@@ -6,7 +6,7 @@ import java.util.TreeMap;
 
 /**
  * @Description: 迪杰特斯拉算法应用
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/2/10
  */
 public class Solution {

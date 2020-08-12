@@ -2,7 +2,7 @@ package _bit_calc._268;
 
 /**
  * @Description: 求含0, 1, 2, 3....n的数组(length =n)中缺失的数
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/7/28 22:28
  */
 //思路：对数组进行排序后，则nums[i] = i或者nums[i]= i-1,想法在O(n)时间复杂度内进行这样的操作

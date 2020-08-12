@@ -8,7 +8,7 @@ package _CONTEST._weekly._197;
  * Given an array positions where positions[i] = [xi, yi] is the position of the ith customer on the map, return the minimum sum of the euclidean distances to all customers.
  * In other words, you need to choose the position of the service centre [xcentre, ycentre] such that the following formula is minimized:
  * Answers within 10^-5 of the actual value will be accepted.
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/12
  */
 

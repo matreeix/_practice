@@ -18,7 +18,7 @@ import java.util.List;
  * <p>
  * 请你实现这个将字符串进行指定行数变换的函数：
  * string convert(string s, int numRows);
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/8/6
  */
 

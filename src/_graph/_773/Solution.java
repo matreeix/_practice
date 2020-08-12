@@ -7,7 +7,7 @@ import java.util.Queue;
 
 /**
  * @Description:滑动谜题
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/2/7
  */
 public class Solution {

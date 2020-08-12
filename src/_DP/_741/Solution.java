@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @Description: 摘樱桃
  * @Linked: https://leetcode-cn.com/problems/cherry-pickup/solution/dong-tai-gui-hua-xiang-xi-jie-xi-tu-jie-by-newhar/
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/5/9
  */
 public class Solution {

@@ -4,7 +4,7 @@ import java.util.PriorityQueue;
 
 /**
  * @Description: 合并k个有序链表
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/5/27
  */
 public class Solution {

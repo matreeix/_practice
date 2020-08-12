@@ -5,7 +5,7 @@ import java.util.Queue;
 
 /**
  * @Description:二进制矩阵中的最短路径
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/2/5
  */
 public class Solution {

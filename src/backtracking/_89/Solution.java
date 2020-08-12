@@ -11,7 +11,7 @@ import java.util.List;
  * 给定一个代表编码总位数的非负整数 n，打印其格雷编码序列。即使有多个不同答案，你也只需要返回其中一种。
  * <p>
  * 格雷编码序列必须以 0 开头。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/6/14
  */
 public class Solution {

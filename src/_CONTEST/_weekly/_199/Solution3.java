@@ -6,7 +6,7 @@ package _CONTEST._weekly._199;
  * 给你二叉树的根节点 root 和一个整数 distance 。
  * 如果二叉树中两个叶节点之间的最短路径长度 小于或者等于 distance,那它们就可以构成一组好叶子节点对 。
  * 返回树中 好叶子节点对的数量 。
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/7/26
  */
 

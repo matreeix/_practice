@@ -4,7 +4,7 @@ import java.util.Stack;
 
 /**
  * @Description: 二分搜索树的判定
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/3/22
  */
 public class Solution {

@@ -2,7 +2,7 @@ package _tree._binary_tree._108;
 
 /**
  * @Description: 给定数组，生成一颗平衡BST
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/3/27
  */
 public class Solution {

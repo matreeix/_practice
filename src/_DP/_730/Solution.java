@@ -2,7 +2,7 @@ package _DP._730;
 
 /**
  * @Description: 统计不同回文子字符串
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/4/17
  */
 public class Solution {

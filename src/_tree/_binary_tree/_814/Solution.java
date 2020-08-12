@@ -2,7 +2,7 @@ package _tree._binary_tree._814;
 
 /**
  * @Description: 二叉树的剪枝
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/5/6
  */
 public class Solution {

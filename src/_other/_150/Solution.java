@@ -6,7 +6,7 @@ import java.util.Stack;
 
 /**
  * @Description: 计算逆波兰表达式
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2019/8/20 21:44
  */
 public class Solution {

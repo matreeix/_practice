@@ -5,7 +5,7 @@ import java.util.TreeSet;
 
 /**
  * @Description:判断学习计划能否完成，有环就不能完成
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/2/14
  */
 public class Solution {

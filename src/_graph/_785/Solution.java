@@ -2,7 +2,7 @@ package _graph._785;
 
 /**
  * @Description:二分图的检测
- * @Author: caffebaby
+ * @Author: matreeix
  * @Date: 2020/2/5
  */
 public class Solution {
