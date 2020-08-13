@@ -18,17 +18,49 @@ public class Solution {
         for (int i = 0; i < n; i++)
             prefix[i + 1] = prefix[i] + stones[i];
 
-        int[][] dp = new int[n][n];//dp[i][j] means the minimum cost needed to merge stones[i] ~ stones[j]
-        for (int m = K; m <= n; ++m)
-            for (int i = 0; i + m <= n; ++i) {
-                int j = i + m - 1;
+        int[][] dp = new int[n][n];//dp[i][j] 表示合并stones[i] ~ stones[j]的最小花销
+        for (int len = K; len <= n; ++len)
+            for (int i = 0; i + len <= n; ++i) {
+                int j = i + len - 1;//j-i == m-1
                 dp[i][j] = Integer.MAX_VALUE;
                 for (int mid = i; mid < j; mid += K - 1)
-                    dp[i][j] = Math.min(dp[i][j], dp[i][mid] + dp[mid + 1][j]);
-                if ((j - i) % (K - 1) == 0)
-                    dp[i][j] += prefix[j + 1] - prefix[i];
+                    dp[i][j] = Math.min(dp[i][j], dp[i][mid] + dp[mid + 1][j]);//找花销最小的两个区间进行合并
+                if ((j - i) % (K - 1) == 0)//刚好能合并的情况
+                    dp[i][j] += prefix[j + 1] - prefix[i];//[i,j]最后一轮合并的花销
             }
         return dp[0][n - 1];
+    }
+
+    //k=2的特例
+    public int mergeStonesTwo(int[] stones) {
+        if (stones == null || stones.length == 0) {
+            return 0;
+        }
+        int len = stones.length;
+        int max = Integer.MAX_VALUE;
+        int[][] dp = new int[len + 1][len + 1];
+        int[] prefixSum = new int[len + 1];
+        int i, j, k, l;
+        for (i = 1; i <= len; i++) {
+            prefixSum[i] = prefixSum[i - 1] + stones[i - 1];
+        }
+
+        for (i = 1; i <= len; i++) {
+            dp[i][i] = 0;
+        }
+
+        for (l = 2; l <= len; l++) {
+            for (i = 1; i <= len - l + 1; i++) {
+                j = i + l - 1;
+                dp[i][j] = max;
+                int sum = prefixSum[j] - prefixSum[i - 1];
+                for (k = i; k < j; k++) {
+                    dp[i][j] = Math.min(dp[i][j], dp[i][k] + dp[k + 1][j] + sum);
+                }
+            }
+        }
+
+        return dp[1][len];
     }
 
 }
