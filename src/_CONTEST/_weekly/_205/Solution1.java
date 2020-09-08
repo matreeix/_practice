@@ -17,8 +17,8 @@ public class Solution1 {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == '?') {
                 for (int j = 0; j < 3; j++) {
-                    if (i > 0 && arr[i - 1] - 'a' == j) continue;
-                    if (i + 1 < arr.length && arr[i + 1] - 'a' == j) continue;
+                    if (i > 0 && arr[i - 1] - 'a' == j) continue;//不和前一个字符重复
+                    if (i + 1 < arr.length && arr[i + 1] - 'a' == j) continue;//不和后一个字符重复
                     arr[i] = (char) ('a' + j);
                     break;
                 }
