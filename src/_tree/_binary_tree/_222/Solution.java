@@ -28,7 +28,7 @@ public class Solution {
         return 1 + countNodes2(root.left) + countNodes2(root.right);
     }
 
-    //二分搜索,妙啊！
+    //二分搜索,妙啊！ O((log n)^2)
     private int height(TreeNode root) {
         return root == null ? -1 : 1 + height(root.left);
     }
