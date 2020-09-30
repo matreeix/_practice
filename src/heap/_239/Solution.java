@@ -62,3 +62,22 @@ public class Solution {
     }
 
 }
+
+class Monoqueue {
+    Deque<Integer> q = new ArrayDeque<>();
+
+    public void push(Integer n) {
+
+        while (!q.isEmpty() && q.peekLast().compareTo(n) < 0) q.pollLast();
+        q.offerLast(n);
+    }
+
+    public Integer front() {
+        return q.peekFirst();
+    }
+
+    public void pop(Integer n){
+        if (n.equals(q.peekFirst())) q.pollFirst();
+    }
+
+}
