@@ -76,7 +76,7 @@ class Monoqueue {
         return q.peekFirst();
     }
 
-    public void pop(Integer n){
+    public void pop(Integer n) {
         if (n.equals(q.peekFirst())) q.pollFirst();
     }
 
