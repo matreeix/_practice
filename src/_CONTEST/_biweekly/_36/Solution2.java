@@ -16,7 +16,7 @@ import java.util.*;
  */
 
 public class Solution2 {
-    //hashmap+滑动窗口
+    //hashmap + 1滑动窗口
     public List<String> alertNames(String[] keyName, String[] keyTime) {
         Map<String, TreeSet<Integer>> nameToTime = new HashMap<>();
         for (int i = 0; i < keyName.length; ++i) {
@@ -58,6 +58,10 @@ public class Solution2 {
             }
         }
         return new ArrayList<>(names);
+    }
+
+    public static void main(String[] args) {
+        
     }
 
 
