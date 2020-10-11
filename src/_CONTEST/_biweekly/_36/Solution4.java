@@ -19,7 +19,6 @@ import java.util.*;
  */
 
 public class Solution4 {
-
     //优先队列+TreeMap
     //Node类，把服务器编号与运行截止时间绑在一起丢进优先队列，实现排序接口
     private class Node implements Comparable<Node> {
@@ -43,16 +42,13 @@ public class Solution4 {
     TreeMap<Integer, Integer> treeMap = new TreeMap<>();
 
     public List<Integer> busiestServers(int k, int[] arrival, int[] load) {
-
         //记录每个服务器接收请求数
         int[] num = new int[k];
         //初始，每个服务器都可用，丢进TreeMap
-        for (int i = 0; i < k; i++) {
+        for (int i = 0; i < k; i++)
             treeMap.put(i, 0);
-        }
 
         for (int i = 0; i < arrival.length; i++) {
-
             //接收第i个请求时，把已运行截止的请求从优先队列中删掉，并释放对应的服务器（丢进treeMap）
             while (!Q.isEmpty() && Q.peek().time < arrival[i]) {
                 treeMap.put(Q.peek().server, 0);
@@ -62,10 +58,9 @@ public class Solution4 {
             //找第i%k服务器是否空闲，如果不空闲找它后面的空闲的服务器【treeMap特性，ceilingKey()返回>=i%k最小的空闲服务器号】
             Integer index = treeMap.ceilingKey(i % k);
             //index是包装类，所以找不到时等于null
-            if (index == null) {
-                //如果>=i%k找不到，那么从0开始找
+            if (index == null) //如果>=i%k找不到，那么从0开始找
                 index = treeMap.ceilingKey(-1);
-            }
+
             //如果还是找不到空闲服务器，则舍弃该请求，所以只需判断index != null的情况
             if (index != null) {
                 //把该请求的截止时间丢进优先队列，注意load是持续时间，所以要-1
@@ -78,17 +73,15 @@ public class Solution4 {
         }
         //找最大请求数
         int max = 0;
-        for (int i = 0; i < k; i++) {
+        for (int i = 0; i < k; i++)
             max = Math.max(max, num[i]);
-        }
 
         List<Integer> ans = new ArrayList<>();
         //把=最大请求数的服务器编号丢进答案
-        for (int i = 0; i < k; i++) {
-            if (num[i] == max) {
+        for (int i = 0; i < k; i++)
+            if (num[i] == max)
                 ans.add(i);
-            }
-        }
+
         return ans;
     }
 
