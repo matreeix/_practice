@@ -44,6 +44,23 @@ public class Solution {
 //        return A + "A" + B + "B";
     }
 
+    public String getHint2(String secret, String guess) {
+        int[] countsSecret = new int[10], countsGuess = new int[10];
+        int n = secret.length(), bulls = 0, cows = 0;
+        for (int i = 0; i < n; i++) {
+            if (secret.charAt(i) == guess.charAt(i)) bulls++;
+            else {
+                countsSecret[secret.charAt(i) - '0']++;
+                countsGuess[guess.charAt(i) - '0']++;
+            }
+        }
+        for (int i = 0; i < 10; i++) {//妙啊！
+            if (countsSecret[i] > 0) cows += Math.min(countsSecret[i], countsGuess[i]);
+        }
+        StringBuilder hint = new StringBuilder();
+        return hint.append(bulls).append('A').append(cows).append('B').toString();
+    }
+
     public static void main(String[] args) {
         System.out.println(getHint("1123", "0111"));
     }
