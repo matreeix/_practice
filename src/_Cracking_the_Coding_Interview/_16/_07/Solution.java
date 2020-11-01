@@ -10,6 +10,6 @@ package _Cracking_the_Coding_Interview._16._07;
 public class Solution {
     public int maximum(int a, int b) {
         long k = (((long) a - (long) b) >> 63) & 1;
-        return (int) (b * k + a * (k ^ 1));
+        return (int) (b * k + a * (k ^ 1));//a-b>0,则k=0
     }
 }
