@@ -1,6 +1,5 @@
 package _Cracking_the_Coding_Interview._16._11;
 
-import java.util.Collections;
 
 /**
  * @Description: 面试题 16.11. 跳水板
