@@ -57,7 +57,7 @@ public class Solution {
         else return generateGCD(b, a % b);
     }
 
-    //向量法
+    //向量法,仅仅适用于无重复点
     public static int maxPoints2(int[][] points) {
         int cnt;//记录直线穿过点的数量
         int maxp = 0;//记录cnt的最大值
@@ -71,10 +71,6 @@ public class Solution {
                     break;
                 long x1 = points[j][0] - points[i][0];
                 long y1 = points[j][1] - points[i][1];
-                if (x1 == 0 && y1 == 0) {
-                    repeat = repeat == 0 ? 1 : repeat + 1;
-                    continue;
-                }
                 for (int k = j + 1; k < n; k++) {//不断更新第三个点
                     long x2 = points[k][0] - points[i][0];
                     long y2 = points[k][1] - points[i][1];
