@@ -36,7 +36,6 @@ public class Solution {
         }
         return new int[]{m, n};
     }
-
     public static int[] subSort2(int[] array) {
         int[] res = {-1, -1};
         if (array.length == 0) return res;
@@ -60,7 +59,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 3, 9, 7, 5};
-        System.out.println(Arrays.toString(subSort(arr)));
+        int[] arr = {1, 3, 9, 7, 8,9};
+        System.out.println(Arrays.toString(subSort2(arr)));
     }
 }
