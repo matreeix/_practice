@@ -25,7 +25,7 @@ package _CONTEST._weekly._215;
 public class Solution4 {
     public int getMaxGridHappiness(int m, int n, int introvertsCount, int extrovertsCount) {
         //优化
-        if (m < n) {
+        if (m < n) {//m>n
             m ^= n;
             n ^= m;
             m ^= n;
