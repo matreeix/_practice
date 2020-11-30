@@ -14,33 +14,26 @@ public class Solution {
     public boolean patternMatching(String pattern, String value) {
         // 计算模式串中 a,b 的数量
         int countA = 0, countB = 0;
-        for (char ch : pattern.toCharArray()) {
-            if (ch == 'a') {
-                ++countA;
-            } else {
-                ++countB;
-            }
-        }
+        for (char ch : pattern.toCharArray())
+            if (ch == 'a') ++countA;
+            else ++countB;
+
         //如果 b 的数量大于 a 的数量，交换 a 和 b
         if (countA < countB) {
             int temp = countA;
             countA = countB;
             countB = temp;
             char[] array = pattern.toCharArray();
-            for (int i = 0; i < array.length; i++) {
+            for (int i = 0; i < array.length; i++)
                 array[i] = array[i] == 'a' ? 'b' : 'a';
-            }
             pattern = new String(array);
         }
         //如果主串是空字符串，并且模式串只有一种子模式或模式串也是空字符串，则匹配成功，返回 true 。
         //否则失败，返回 false
-        if (value.length() == 0) {
-            return countB == 0;
-        }
+        if (value.length() == 0) return countB == 0;
         //如果模式串是空字符串，并且主串非空，则匹配失败
-        if (pattern.length() == 0) {
-            return false;
-        }
+        if (pattern.length() == 0) return false;
+
         for (int lenA = 0; countA * lenA <= value.length(); ++lenA) {
             //主串减去 countA 个长度为 lenA 的 a 子模式匹配值后剩余字符数量。
             //剩余部分是需要和 b 模式进行匹配，由于从模式串已知 b 子模式的数量，
