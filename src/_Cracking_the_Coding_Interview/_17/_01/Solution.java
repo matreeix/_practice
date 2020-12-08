@@ -11,8 +11,8 @@ public class Solution {
     public int add(int a, int b) {
         int carry = 0;
         while (b != 0) {
-            carry = (a & b) << 1;
-            a ^= b;
+            carry = (a & b) << 1;//得到进位
+            a ^= b;//得到非进位
             b = carry;
         }
         return a;
