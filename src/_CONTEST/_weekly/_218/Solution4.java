@@ -26,9 +26,10 @@ public class Solution4 {
     int N;
     Map<String, Integer> memo;
     int k;
+
     public int minimumIncompatibility(int[] nums, int k) {
         Arrays.sort(nums);
-        memo = new HashMap<>(); k = k;
+        memo = new HashMap<>();
         int[] count = new int[17];
         for (int num : nums) if (++count[num] > k) return -1;
         N = nums.length / k;
@@ -36,33 +37,40 @@ public class Solution4 {
     }
 
     private int dfs(int level, int[] count) {
-        if (Integer.bitCount(level) == N) {
-            if (end(count)) return findDiff(level);
-            else return findDiff(level) + dfs(0, count);
-        }
+        if (Integer.bitCount(level) == N)
+            if (end(count))
+                return findDiff(level);
+            else
+                return findDiff(level) + dfs(0, count);
+
         String key = Arrays.hashCode(count) + " " + level;
         if (memo.containsKey(key)) return memo.get(key);
         int res = 1000;
         for (int i = 1; i <= 16; i++) {
-            if (count[i] <= 0) continue;
+            if (count[i] <= 0)
+                continue;
             int mask = 1 << i;
-            if ((level & mask) != 0) continue;
+            if ((level & mask) != 0)
+                continue;
             level |= mask;
             count[i]--;
             res = Math.min(res, dfs(level, count));
             count[i]++;
             level ^= mask;
-            if (Integer.bitCount(level) == 0) break;  // first element we don't need to expand
+            if (Integer.bitCount(level) == 0)
+                break;  // first element we don't need to expand
         }
         memo.put(key, res);
         return res;
     }
 
+    //
     private int findDiff(int level) {
         int max = 0, min = 16;
         for (int i = 1; i <= 16; i++) {
             int mask = 1 << i;
-            if ((level & mask) == 0) continue;
+            if ((level & mask) == 0)
+                continue;
             max = Math.max(max, i);
             min = Math.min(min, i);
         }
@@ -70,7 +78,9 @@ public class Solution4 {
     }
 
     private boolean end(int[] count) {
-        for (int c : count) if (c != 0) return false;
+        for (int c : count)
+            if (c != 0)
+                return false;
         return true;
     }
 
