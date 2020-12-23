@@ -31,10 +31,7 @@ public class Solution3 {
             queue.offer(new int[]{res, i});
         }
         return res;
-
-
     }
 
 
 }
-
