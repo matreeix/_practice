@@ -11,7 +11,7 @@ package _CONTEST._weekly._222;
 
 public class Solution3 {
     //三指针
-    public int waysToSplit(int[] nums) {
+    public static int waysToSplit(int[] nums) {
         int n = nums.length;
         int[] sum = new int[n + 1];
         for (int i = 1; i <= n; i++) {
@@ -23,13 +23,14 @@ public class Solution3 {
         // |______|________|_______|________|
         // 1      i        l       r        n
         // i 表示第一刀的位置，枚举第一刀的位置，计算第二刀的可选位置数
-        for (int i = 1, l = 2, r = 2; i <= n - 1; i++) {
+        for (int i = 1, l = 2, r = 2; sum[i] <= sum[n] / 3 && i < n; i++) {
             l = Math.max(l, i + 1);
             r = Math.max(r, i + 1);
             // sum(right) >= sum(mid)，r最大为n-1，right保证要有一个数
             while (r <= n - 1 && sum[n] - sum[r] >= sum[r] - sum[i]) {
                 r++;
             }
+
             // sum(mid) >= sum(left)
             while (l <= n - 1 && sum[l] - sum[i] < sum[i]) {
                 l++;
@@ -41,6 +42,9 @@ public class Solution3 {
         return (int) (ans % MOD);
     }
 
+    public static void main(String[] args) {
+        int[] arr = new int[100];
+        System.out.println(waysToSplit(arr));
+    }
+
 }
-
-
