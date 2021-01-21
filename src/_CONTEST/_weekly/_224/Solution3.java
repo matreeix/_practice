@@ -35,24 +35,3 @@ public class Solution3 {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
