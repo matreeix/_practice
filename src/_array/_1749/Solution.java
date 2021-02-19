@@ -8,6 +8,7 @@ package _array._1749;
  */
 
 public class Solution {
+    //abs子数组总和 = 一个前缀总和 - 另一个前缀总和 <= 最大前缀总和 - 最小前缀总和
     public int maxAbsoluteSum(int[] nums) {
         int s = 0, min = 0, max = 0;
         for (int a : nums) {
