@@ -21,6 +21,10 @@ public class Solution {
         return true;
     }
 
+    public boolean checkPowersOfThree2(int n) {
+        return n < 2 || (n % 3 != 2 && checkPowersOfThree(n / 3));
+    }
+
     public static void main(String[] args) {
         System.out.println(checkPowersOfThree(12));
         System.out.println(checkPowersOfThree(91));
