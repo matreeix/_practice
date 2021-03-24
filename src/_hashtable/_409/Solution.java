@@ -15,24 +15,25 @@ import java.util.Arrays;
 
 public class Solution {
     public static int longestPalindrome(String s) {
-        int[] cnt = new int[52];
-        for (char ch : s.toCharArray())
-            if (ch > 96)
-                cnt[ch - 'a']++;
-            else
-                cnt[ch - 'A' + 26]++;
-        System.out.println(Arrays.toString(cnt));
-        int res = 0, tmp = 0;
-        for (int i : cnt)
-            if (i % 2 == 0)
-                res += i;
-            else
-                tmp = Math.max(tmp, i);
-        return res + tmp;
+        int[] count = new int[128];
+        int length = s.length();
+        for (int i = 0; i < length; ++i) {
+            char c = s.charAt(i);
+            count[c]++;
+        }
+
+        int ans = 0;
+        for (int v: count) {
+            ans += v / 2 * 2;
+            if (v % 2 == 1 && ans % 2 == 0) {
+                ans++;
+            }
+        }
+        return ans;
     }
 
     public static void main(String[] args) {
-        System.out.println(longestPalindrome("asdzxcqwerfvbASDgtyhnmjuiklopQWERTYUIOPASDCXZFVGBHNJMKL"));
-        System.out.println('A' + 0);
+        String s ="civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth";
+        System.out.println(longestPalindrome(s));
     }
 }
