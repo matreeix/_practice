@@ -57,7 +57,7 @@ public class Solution {
         return (long) state[0] * 1000001 + state[1];
     }
 
-    //贝祖定理
+    //贝祖定理:ax+by=z 有解当且仅当 z 是 x, y 的最大公约数的倍数
     public boolean canMeasureWater2(int x, int y, int z) {
         if (x + y < z) return false;
         if (x == 0 || y == 0) return z == 0 || x + y == z;
