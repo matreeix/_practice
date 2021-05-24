@@ -8,18 +8,45 @@ package _hashtable._395;
  */
 public class Solution {
     public static int longestSubstring(String s, int k) {
+        int n = s.length();
+        return dfs(s, 0, n - 1, k);
+    }
+
+    public static int dfs(String s, int l, int r, int k) {
         int[] cnt = new int[26];
-        for (char ch : s.toCharArray()) cnt[ch - 'a']++;
-        int start = -1, res = 0;
-        for (int i = 0; i < s.length(); i++) {
-            if (cnt[s.charAt(i) - 'a'] < k) {
-                res = Math.max(res, i - start - 1);
-                start = i;
-                System.out.println(res);
+        for (int i = l; i <= r; i++) {//统计[l.r]间字符频数
+            cnt[s.charAt(i) - 'a']++;
+        }
+
+        char split = 0;//找出小于k的字符
+        for (int i = 0; i < 26; i++) {
+            if (cnt[i] > 0 && cnt[i] < k) {
+                split = (char) (i + 'a');
+                break;
             }
         }
-        res = Math.max(res, s.length() - start-1);
-        return res;
+        if (split == 0) {//不存在 <k 的字符，直接返回
+            return r - l + 1;
+        }
+
+        int i = l;
+        int ret = 0;
+        while (i <= r) {
+            while (i <= r && s.charAt(i) == split) {
+                i++;
+            }
+            if (i > r) {
+                break;
+            }
+            int start = i;
+            while (i <= r && s.charAt(i) != split) {
+                i++;
+            }
+
+            int length = dfs(s, start, i - 1, k);
+            ret = Math.max(ret, length);
+        }
+        return ret;
     }
 
     public static void main(String[] args) {
