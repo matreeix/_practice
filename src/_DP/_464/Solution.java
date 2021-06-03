@@ -2,6 +2,7 @@ package _DP._464;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.stream.IntStream;
 
 /**
  * @Description: 464. 我能赢吗
@@ -14,6 +15,8 @@ import java.util.HashMap;
  * @Date: 2020/4/19
  */
 public class Solution {
+
+    //回溯法
     public boolean canIWin(int maxChoosableInteger, int desiredTotal) {
         if (desiredTotal <= 0) return true;
         if (maxChoosableInteger * (maxChoosableInteger + 1) / 2 < desiredTotal) return false;
@@ -36,6 +39,36 @@ public class Solution {
             }
         }
         hashMap.put(curr, false);//遍历完数字都没得到结果
+        return false;
+    }
+
+    public boolean canIWin2(int maxChoosableInteger, int desiredTotal) {
+        if (IntStream.rangeClosed(1, maxChoosableInteger).sum() < desiredTotal) {
+            return false;
+        } else {
+            int[] dp = new int[1 << maxChoosableInteger];
+            return canIWin2(dp, 0, desiredTotal, maxChoosableInteger);
+        }
+    }
+
+    private boolean canIWin2(int[] dp, int state, int goal, int max) {
+        if (dp[state] != 0)
+            return dp[state] == 1 ? true : false;
+        for (int ptr = 1 << max - 1, num = max; ptr > 0; ptr >>= 1, num--) {
+            if ((ptr & state) != 0) continue;
+            if (num >= goal) {
+                dp[state] = 1;
+                return true;
+            }
+            state |= ptr;
+            boolean flag = canIWin2(dp, state, goal - num, max);
+            state ^= ptr;
+            if (!flag) {
+                dp[state] = 1;
+                return true;
+            }
+        }
+        dp[state] = -1;
         return false;
     }
 }
