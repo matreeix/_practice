@@ -1,0 +1,27 @@
+-- 183. 从不订购的客户 某网站包含两个表，Customers 表和 Orders 表。编写一个 _leetcode.SQL 查询，找出所有从不订购任何东西的客户。
+-- SQL架构
+Create table If Not Exists Customers (Id int, Name varchar(255))
+Create table If Not Exists Orders (Id int, CustomerId int)
+Truncate table Customers
+insert into Customers (Id, Name) values ('1', 'Joe')
+insert into Customers (Id, Name) values ('2', 'Henry')
+insert into Customers (Id, Name) values ('3', 'Sam')
+insert into Customers (Id, Name) values ('4', 'Max')
+Truncate table Orders
+insert into Orders (Id, CustomerId) values ('1', '3')
+insert into Orders (Id, CustomerId) values ('2', '1')
+
+-- 查询语句
+-- 1. NOT IN
+select customers.name as 'Customers'
+from customers
+where customers.id not in
+(
+    select customerid from orders
+);
+-- 2.左连接
+select customers.name as 'Customers'
+from customers
+left join orders
+on orders.CustomerId  = customers.Id
+where orders.CustomerId  is  Null
