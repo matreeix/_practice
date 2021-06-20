@@ -1,2 +1,2 @@
-# _leetcode
-leetcode刷题之旅
+# _practice
+算法刷题总结
