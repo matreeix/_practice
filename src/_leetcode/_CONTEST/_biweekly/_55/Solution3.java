@@ -25,4 +25,14 @@ public class Solution3 {
         }
         return res;
     }
+
+    //DP
+    public long maxAlternatingSum2(int[] A) {
+        long odd = 0, even = 0;
+        for (int a : A) {
+            even = Math.max(even, odd + a);
+            odd = even - a;
+        }
+        return even;
+    }
 }
