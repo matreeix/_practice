@@ -35,4 +35,30 @@ public class Solution3 {
         }
         return Arrays.stream(prev_row).max().getAsLong();
     }
+
+    public long maxPoints2(int[][] points) {
+        int m = points.length;
+        int n = points[0].length;
+        long[] currRow = new long[n];
+        for (int j = 0; j < n; j++) {
+            currRow[j] = points[0][j];
+        }
+        long[] maxLeft = new long[n]; // points[i][j] + j
+        long[] maxRight = new long[n]; // points[i][j] - j
+
+        for (int i = 1; i < m; i++) {
+            maxLeft[0] = currRow[0];
+            for (int j = 1; j < n; j++) {
+                maxLeft[j] = Math.max(maxLeft[j - 1], currRow[j] + j);
+            }
+            maxRight[n - 1] = currRow[n - 1] - (n - 1);
+            for (int j = n - 2; j >= 0; j--) {
+                maxRight[j] = Math.max(maxRight[j + 1], currRow[j] - j);
+            }
+            for (int j = 0; j < n; j++) {
+                currRow[j] = Math.max(points[i][j] + j + maxRight[j], points[i][j] - j + maxLeft[j]);
+            }
+        }
+        return Arrays.stream(currRow).max().getAsLong();
+    }
 }
