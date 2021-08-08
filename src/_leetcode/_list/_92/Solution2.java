@@ -5,7 +5,7 @@ package _leetcode._list._92;
  * @Author: matreeix
  * @Date: 2019/8/4 23:51
  */
-public class Soluton2 {
+public class Solution2 {
     public class ListNode {
         int val;
         ListNode next;
