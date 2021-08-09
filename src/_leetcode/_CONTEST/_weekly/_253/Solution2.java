@@ -1,7 +1,5 @@
 package _leetcode._CONTEST._weekly._253;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLPortType;
-
 import java.util.PriorityQueue;
 
 /**
@@ -29,12 +27,29 @@ public class Solution2 {
             p.add((tmp + 1) / 2);
             k--;
         }
-        System.out.println(p);
         int res = 0;
         while (p.size() > 0) {
             res += p.poll();
         }
         return res;
+    }
+
+    int MAX_VAL = 10000;
+
+    public int minArraySum2(int[] nums, int k) {
+        int[] f = new int[MAX_VAL + 1];
+        for (int x : nums) f[x]++;
+        for (int v = MAX_VAL; v >= 1 && k > 0; v--) {
+            while (f[v] > 0 && k > 0) {
+                int newv = (v + 1) / 2;
+                f[v]--;
+                f[newv]++;
+                k--;
+            }
+        }
+        int ans = 0;
+        for (int v = 1; v <= MAX_VAL; v++) ans += v * f[v];
+        return ans;
     }
 
     public static void main(String[] args) {
