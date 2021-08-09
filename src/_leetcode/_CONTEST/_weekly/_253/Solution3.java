@@ -1,7 +1,5 @@
 package _leetcode._CONTEST._weekly._253;
 
-import org.omg.CORBA.INTERNAL;
-
 import java.util.Stack;
 
 /**
@@ -44,6 +42,23 @@ public class Solution3 {
         int cnt = stack.size();
         if (cnt == 0) return 0;
         return (cnt / 2 + 1) / 2;
+    }
+
+    public int minSwaps2(String s) {
+        int now = 0;
+        int ans = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '[') {
+                now++;
+            } else {
+                now--;
+                if (now < 0) {
+                    ans++;
+                    now += 2;
+                }
+            }
+        }
+        return ans;
     }
 
     public static void main(String[] args) {
