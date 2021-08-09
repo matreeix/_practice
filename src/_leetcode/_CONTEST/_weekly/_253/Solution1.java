@@ -11,23 +11,12 @@ package _leetcode._CONTEST._weekly._253;
 public class Solution1 {
 
     public boolean isPrefixString(String s, String[] words) {
-        int idx1 = 0;
-        int idx2 = 0;
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) != words[idx1].charAt(idx2)) {
-                return false;
-            } else {
-                if (idx2 == words[idx1].length() - 1) {
-                    idx2 = 0;
-                    idx1++;
-                    if (idx1 == words.length && i != s.length() - 1)
-                        return false;
-                } else {
-                    idx2++;
-                }
-            }
-
+        String now = "";
+        for (int i = 0; i < words.length; i++) {
+            now += words[i];
+            if (now.length() > s.length()) return false;
+            if (now.equals(s)) return true;
         }
-        return idx2 == 0;
+        return false;
     }
 }
