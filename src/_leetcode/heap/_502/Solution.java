@@ -1,4 +1,4 @@
-package _leetcode._greedy._502;
+package _leetcode.heap._502;
 
 import java.util.Arrays;
 import java.util.HashMap;
