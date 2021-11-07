@@ -16,7 +16,6 @@ package _leetcode._CONTEST._weekly._266;
 
 public class Solution3 {
     public int minimizedMaximum(int n, int[] quantities) {
-//        if (n == 1) return quantities[0];
         int l = 1, r = 100000;
         while (l < r) {
             int mid = (l + r) / 2;

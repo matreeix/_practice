@@ -1,5 +1,8 @@
 package _leetcode._CONTEST._weekly._266;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @Description: 5918. 统计字符串中的元音子字符串
  * 子字符串 是字符串中的一个连续（非空）的字符序列。
@@ -50,5 +53,41 @@ public class Solution1 {
             }
         }
         return a && e && i && o && u;
+    }
+
+    public int countVowelSubstrings2(String word) {
+        int j = 0;// j标记“全元音”子串的开始
+        int k = 0;// [k-1, i]是包含所有5个元音的最小窗口
+        int vow = 0;// 统计是否5个元音都有
+        int cnt = 0;
+        Map<Character, Integer> map = new HashMap<>();
+        map.put('a', 0);
+        map.put('e', 0);
+        map.put('i', 0);
+        map.put('o', 0);
+        map.put('u', 0);
+        for (int i = 0; i < word.length(); ++i) {
+            if (map.get(word.charAt(i)) != null) {// 元音
+                map.put(word.charAt(i), map.get(word.charAt(i)) + 1);
+                if (map.get(word.charAt(i)) == 1) {// 代表某个元音第一次出现
+                    ++vow;
+                }
+                while (vow == 5) {// 保证所有元音都存在，k从j开始右移
+                    map.put(word.charAt(k), map.get(word.charAt(k)) - 1);
+                    if (map.get(word.charAt(k)) == 0) {
+                        --vow;
+                    }
+                    k++;
+                }
+                cnt += (k - j);
+            } else {// 辅音
+                map.forEach((k1, v) -> {
+                    map.put(k1, 0);
+                });
+                vow = 0;
+                j = k = i + 1;
+            }
+        }
+        return cnt;
     }
 }

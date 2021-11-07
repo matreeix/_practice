@@ -14,6 +14,8 @@ import java.util.Arrays;
  */
 
 public class Solution2 {
+
+    // 求两次前缀和，求递推关系
     public long countVowels(String word) {
         int[] pre = new int[word.length()];
         pre[0] = isVowel(word.charAt(0)) ? 1 : 0;
@@ -35,6 +37,22 @@ public class Solution2 {
 
     private boolean isVowel(char ch) {
         return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
+
+    /**
+     * 遍历 word，若 word[i] 是元音，我们考察它能出现在多少个子字符串中。
+     * 设 word 的长度为 n。子字符串 word[l..r] 若要包含 word[i]，则必须满足
+     * 0≤l≤i
+     * i≤r≤n−1
+     * 这样的 l 有 i+1 个，r 有 n−i 个，因此有 (i+1)(n−i) 个子字符串，所以 word[i] 在所有子字符串中一共出现了 (i+1)(n−i) 次。
+     * 累加所有出现次数即为答案。
+     * */
+    public long countVowels2(String word) {
+        long result = 0;
+        for (int i = 0; i < word.length(); ++i)
+            if (isVowel(word.charAt(i)))
+                result += (long) (i + 1) * (word.length() - i);
+        return result;
     }
 
     public static void main(String[] args) {
