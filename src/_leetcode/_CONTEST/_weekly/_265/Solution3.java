@@ -17,12 +17,8 @@ import java.util.Queue;
  */
 
 public class Solution3 {
-    private static int target;
-    private static boolean[] visited;
-
     public int minimumOperations(int[] nums, int start, int goal) {
-        target = goal;
-        visited = new boolean[1001];
+        boolean[] visited = new boolean[1001];
         int step = 0;
         Queue<Integer> q = new LinkedList<>();
         q.add(start);
@@ -33,32 +29,15 @@ public class Solution3 {
                 arr[i] = q.poll();
             for (int cur : arr)
                 for (int num : nums)
-                    for (int i = 0; i < 3; i++)
-                        if (check(q, cur, num, i) != 0)
-                            return step + 1;
+                    for (int next : new int[]{cur + num, cur - num, cur ^ num}) {
+                        if (next == goal) return step + 1;
+                        if (0 <= next && next <= 1000 && !visited[next]) {
+                            q.add(next);
+                            visited[next] = true;
+                        }
+                    }
             step++;
         }
         return -1;
     }
-
-    private int check(Queue<Integer> q, int cur, int num, int mark) {
-        switch (mark) {
-            case 0:
-                cur += num;
-                break;
-            case 1:
-                cur -= num;
-                break;
-            case 2:
-                cur ^= num;
-                break;
-        }
-        if (cur == target) return 1;
-        if (0 <= cur && cur <= 1000 && !visited[cur]) {
-            q.add(cur);
-            visited[cur] = true;
-        }
-        return 0;
-    }
-
 }
