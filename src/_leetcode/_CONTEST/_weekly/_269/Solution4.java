@@ -25,6 +25,7 @@ import java.util.*;
  */
 
 public class Solution4 {
+    // 并查集
     public List<Integer> findAllPeople(int n, int[][] meetings, int firstPerson) {
         UF uf = new UF(n);
         uf.union(firstPerson, 0);
@@ -82,6 +83,54 @@ public class Solution4 {
 
         public void union(int x, int y) {
             p[find(y)] = find(x);
+        }
+    }
+
+    public Set<Integer> set;
+    public Map<Integer, List<Integer>> map;
+
+    // BFS
+    public List<Integer> findAllPeople2(int n, int[][] meetings, int firstPerson) {
+        set = new HashSet<>();
+        set.add(0);
+        set.add(firstPerson);
+
+        Arrays.sort(meetings, Comparator.comparingInt(m -> m[2]));
+        map = new HashMap<>();
+        int curTime = meetings[0][2];
+
+        for (int[] meeting : meetings) {
+            if (curTime != meeting[2]) {// 更新时刻
+                // 结算上一时刻
+                bfs();
+                map.clear();
+                curTime = meeting[2];
+            }
+            map.putIfAbsent(meeting[0], new ArrayList<>());
+            map.putIfAbsent(meeting[1], new ArrayList<>());
+            map.get(meeting[0]).add(meeting[1]);
+            map.get(meeting[1]).add(meeting[0]);
+        }
+        if (!map.isEmpty()) {
+            bfs();
+        }
+
+        return new ArrayList<>(set);
+    }
+
+    private void bfs() {
+        Set<Integer> tmp = new HashSet<>(map.keySet());
+        tmp.retainAll(set);
+        Queue<Integer> q = new LinkedList<>(tmp);
+        while (!q.isEmpty()) {
+            int cur = q.poll();
+            List<Integer> list = map.get(cur);
+            for (int next : list) {
+                if (!set.contains(next)) {
+                    set.add(next);
+                    q.add(next);
+                }
+            }
         }
     }
 
