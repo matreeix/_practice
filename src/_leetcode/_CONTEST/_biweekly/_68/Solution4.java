@@ -39,7 +39,7 @@ public class Solution4 {
     }
 
     public String abbreviateProduct2(int left, int right) {
-        long suff = 1, zero = 0, max_suff = 1000000000000L;
+        long suff = 1, zero = 0, max_suff = 1_000_000_000_000L;
         double pref = 1.0;
         for (int i = left; i <= right; ++i) {
             pref *= i;
@@ -56,7 +56,7 @@ public class Solution4 {
     }
 
     public static void main(String[] args) {
-        int start = 6148, end = 215373;
+        int start = 3940, end = 836328;
         BigInteger a = new BigInteger("" + start);
         for (int i = start + 1; i <= end; i++) {
             a = a.multiply(new BigInteger(i + ""));
